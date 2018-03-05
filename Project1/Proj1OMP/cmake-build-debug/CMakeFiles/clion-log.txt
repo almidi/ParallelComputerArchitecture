@@ -1,5 +1,5 @@
-/home/almidi/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/173.4548.31/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /hdd/TUC/ParallelCompArch/Proj1OMP
+/home/tzanis/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/173.4548.31/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/tzanis/Workspace/Clion/ParallelComputerArchitecture/Project1/Proj1OMP
 -- Found OpenMP_C: -fopenmp  
 -- Configuring done
 -- Generating done
--- Build files have been written to: /hdd/TUC/ParallelCompArch/Proj1OMP/cmake-build-debug
+-- Build files have been written to: /home/tzanis/Workspace/Clion/ParallelComputerArchitecture/Project1/Proj1OMP/cmake-build-debug

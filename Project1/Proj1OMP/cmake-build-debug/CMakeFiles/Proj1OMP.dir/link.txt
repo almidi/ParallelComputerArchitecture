@@ -1,0 +1,1 @@
+/usr/bin/cc  -fopenmp -g    CMakeFiles/Proj1OMP.dir/main.c.o  -o Proj1OMP 

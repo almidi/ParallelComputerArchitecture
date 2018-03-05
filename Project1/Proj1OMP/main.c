@@ -27,6 +27,10 @@ int main(int argc, char **argv) {
     printf("Argument: t = %d\n",t);
     printf("-----------------\n\n");
 
+//  OpenMP Thread Limit
+    omp_set_num_threads(t);
+
+
 //  Init Tables
     dist = malloc(m*sizeof(int*));
     for (i=0;i<m;i++){
@@ -44,13 +48,7 @@ int main(int argc, char **argv) {
     }
 
 
-//  init A set using t or less threads
-    if (t<= m){
-        omp_set_num_threads(t);
-    }
-    else{
-        omp_set_num_threads(m);
-    }
+//  init A set using t threads
     #pragma omp parallel
     {
         int k = omp_get_thread_num();
@@ -61,13 +59,7 @@ int main(int argc, char **argv) {
         }
     }
 
-//  init B set using t or less threads
-    if (t<= n){
-        omp_set_num_threads(t);
-    }
-    else{
-        omp_set_num_threads(n);
-    }
+//  init B set using t threads
     #pragma omp parallel
     {
         int k = omp_get_thread_num();
@@ -79,7 +71,6 @@ int main(int argc, char **argv) {
     }
 
 //  Calculate Hamming using t threads
-    omp_set_num_threads(t);
     #pragma omp parallel
     {
         int k = omp_get_thread_num();
@@ -92,13 +83,13 @@ int main(int argc, char **argv) {
 
 
 //  Print Hamming Distances
-    for (i=0 ; i<m; i++){
-        for (j=0;j<n;j++){
-            printf("%d ",dist[i][j]);
-        }
-        printf("\n");
-    }
-    return 0;
+//    for (i=0 ; i<m; i++){
+//        for (j=0;j<n;j++){
+//            printf("%d ",dist[i][j]);
+//        }
+//        printf("\n");
+//    }
+//    return 0;
 
 }
 
