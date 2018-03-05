@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/hdd/TUC/ParallelCompArch/Proj1OMP/main.c
+stdio.h
+-
+stdlib.h
+-
+time.h
+-
+omp.h
+-
+

@@ -1,0 +1,3 @@
+/hdd/TUC/ParallelCompArch/Proj1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/hdd/TUC/ParallelCompArch/Proj1/cmake-build-debug/CMakeFiles/edit_cache.dir
+/hdd/TUC/ParallelCompArch/Proj1/cmake-build-debug/CMakeFiles/Proj1.dir
