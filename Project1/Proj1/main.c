@@ -56,7 +56,7 @@ int main(int argc, char **argv) {
     for (i=0 ; i<m; i++){
         for (j=0;j<n;j++){
             dist[i][j] = hamming(l,a[i],b[j]);
-            printf("%d ",dist[i][j]);
+            //printf("%d ",dist[i][j]);
         }
         printf("\n");
     }
