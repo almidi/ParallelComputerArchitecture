@@ -10,33 +10,33 @@ The output was:
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
 
-The C compiler identification is GNU, found in "/hdd/TUC/ParallelCompArch/Proj1/cmake-build-debug/CMakeFiles/3.9.6/CompilerIdC/a.out"
+The C compiler identification is GNU, found in "/hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project1/Proj1/cmake-build-debug/CMakeFiles/3.9.6/CompilerIdC/a.out"
 
 Determining if the C compiler works passed with the following output:
-Change Dir: /hdd/TUC/ParallelCompArch/Proj1/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project1/Proj1/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_96432/fast"
-/usr/bin/make -f CMakeFiles/cmTC_96432.dir/build.make CMakeFiles/cmTC_96432.dir/build
-make[1]: Entering directory '/run/media/almidi/21D1D5FD39B737C9/TUC/ParallelCompArch/Proj1/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_96432.dir/testCCompiler.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_96432.dir/testCCompiler.c.o   -c /hdd/TUC/ParallelCompArch/Proj1/cmake-build-debug/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_96432
-/home/almidi/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/173.4548.31/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_96432.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_96432.dir/testCCompiler.c.o  -o cmTC_96432 
-make[1]: Leaving directory '/run/media/almidi/21D1D5FD39B737C9/TUC/ParallelCompArch/Proj1/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_b44d9/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b44d9.dir/build.make CMakeFiles/cmTC_b44d9.dir/build
+make[1]: Entering directory '/run/media/almidi/21D1D5FD39B737C9/TUC/ParallelCompArch/ParallelComputerArchitecture/Project1/Proj1/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b44d9.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_b44d9.dir/testCCompiler.c.o   -c /hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project1/Proj1/cmake-build-debug/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_b44d9
+/home/almidi/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/173.4548.31/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b44d9.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_b44d9.dir/testCCompiler.c.o  -o cmTC_b44d9 
+make[1]: Leaving directory '/run/media/almidi/21D1D5FD39B737C9/TUC/ParallelCompArch/ParallelComputerArchitecture/Project1/Proj1/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: /hdd/TUC/ParallelCompArch/Proj1/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project1/Proj1/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_a80c8/fast"
-/usr/bin/make -f CMakeFiles/cmTC_a80c8.dir/build.make CMakeFiles/cmTC_a80c8.dir/build
-make[1]: Entering directory '/run/media/almidi/21D1D5FD39B737C9/TUC/ParallelCompArch/Proj1/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_a80c8.dir/CMakeCCompilerABI.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_a80c8.dir/CMakeCCompilerABI.c.o   -c /home/almidi/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/173.4548.31/bin/cmake/share/cmake-3.9/Modules/CMakeCCompilerABI.c
-Linking C executable cmTC_a80c8
-/home/almidi/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/173.4548.31/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a80c8.dir/link.txt --verbose=1
-/usr/bin/cc     -v CMakeFiles/cmTC_a80c8.dir/CMakeCCompilerABI.c.o  -o cmTC_a80c8 
+Run Build Command:"/usr/bin/make" "cmTC_51b70/fast"
+/usr/bin/make -f CMakeFiles/cmTC_51b70.dir/build.make CMakeFiles/cmTC_51b70.dir/build
+make[1]: Entering directory '/run/media/almidi/21D1D5FD39B737C9/TUC/ParallelCompArch/ParallelComputerArchitecture/Project1/Proj1/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_51b70.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_51b70.dir/CMakeCCompilerABI.c.o   -c /home/almidi/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/173.4548.31/bin/cmake/share/cmake-3.9/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_51b70
+/home/almidi/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/173.4548.31/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_51b70.dir/link.txt --verbose=1
+/usr/bin/cc     -v CMakeFiles/cmTC_51b70.dir/CMakeCCompilerABI.c.o  -o cmTC_51b70 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/lto-wrapper
@@ -46,24 +46,24 @@ Thread model: posix
 gcc version 7.3.0 (GCC) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a80c8' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccVPR8B4.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_a80c8 /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0 -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/../../.. CMakeFiles/cmTC_a80c8.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/../../../../lib/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a80c8' '-mtune=generic' '-march=x86-64'
-make[1]: Leaving directory '/run/media/almidi/21D1D5FD39B737C9/TUC/ParallelCompArch/Proj1/cmake-build-debug/CMakeFiles/CMakeTmp'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_51b70' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccrbrN8M.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_51b70 /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0 -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/../../.. CMakeFiles/cmTC_51b70.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/../../../../lib/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_51b70' '-mtune=generic' '-march=x86-64'
+make[1]: Leaving directory '/run/media/almidi/21D1D5FD39B737C9/TUC/ParallelCompArch/ParallelComputerArchitecture/Project1/Proj1/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
 Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
-  ignore line: [Change Dir: /hdd/TUC/ParallelCompArch/Proj1/cmake-build-debug/CMakeFiles/CMakeTmp]
+  ignore line: [Change Dir: /hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project1/Proj1/cmake-build-debug/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_a80c8/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_a80c8.dir/build.make CMakeFiles/cmTC_a80c8.dir/build]
-  ignore line: [make[1]: Entering directory '/run/media/almidi/21D1D5FD39B737C9/TUC/ParallelCompArch/Proj1/cmake-build-debug/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_a80c8.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_a80c8.dir/CMakeCCompilerABI.c.o   -c /home/almidi/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/173.4548.31/bin/cmake/share/cmake-3.9/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTC_a80c8]
-  ignore line: [/home/almidi/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/173.4548.31/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a80c8.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/cc     -v CMakeFiles/cmTC_a80c8.dir/CMakeCCompilerABI.c.o  -o cmTC_a80c8 ]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_51b70/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_51b70.dir/build.make CMakeFiles/cmTC_51b70.dir/build]
+  ignore line: [make[1]: Entering directory '/run/media/almidi/21D1D5FD39B737C9/TUC/ParallelCompArch/ParallelComputerArchitecture/Project1/Proj1/cmake-build-debug/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_51b70.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_51b70.dir/CMakeCCompilerABI.c.o   -c /home/almidi/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/173.4548.31/bin/cmake/share/cmake-3.9/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_51b70]
+  ignore line: [/home/almidi/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/173.4548.31/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_51b70.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc     -v CMakeFiles/cmTC_51b70.dir/CMakeCCompilerABI.c.o  -o cmTC_51b70 ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/lto-wrapper]
@@ -73,13 +73,13 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 7.3.0 (GCC) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/:/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/:/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/../../../../lib/:/lib/../lib/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_a80c8' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccVPR8B4.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_a80c8 /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0 -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/../../.. CMakeFiles/cmTC_a80c8.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/../../../../lib/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_51b70' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/collect2 -plugin /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccrbrN8M.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -o cmTC_51b70 /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/../../../../lib/Scrt1.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/../../../../lib/crti.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/crtbeginS.o -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0 -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/../../.. CMakeFiles/cmTC_51b70.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/crtendS.o /usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/../../../../lib/crtn.o]
     arg [/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccVPR8B4.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccrbrN8M.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -94,7 +94,7 @@ Parsed C implicit link information from above output:
     arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
     arg [-pie] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_a80c8] ==> ignore
+    arg [cmTC_51b70] ==> ignore
     arg [/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/../../../../lib/Scrt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/../../../../lib/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/crtbeginS.o] ==> ignore
@@ -103,7 +103,7 @@ Parsed C implicit link information from above output:
     arg [-L/lib/../lib] ==> dir [/lib/../lib]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/../../..] ==> dir [/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.0/../../..]
-    arg [CMakeFiles/cmTC_a80c8.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_51b70.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--as-needed] ==> ignore
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -128,17 +128,17 @@ Parsed C implicit link information from above output:
 
 
 Detecting C [-std=c11] compiler features compiled with the following output:
-Change Dir: /hdd/TUC/ParallelCompArch/Proj1/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project1/Proj1/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_48355/fast"
-/usr/bin/make -f CMakeFiles/cmTC_48355.dir/build.make CMakeFiles/cmTC_48355.dir/build
-make[1]: Entering directory '/run/media/almidi/21D1D5FD39B737C9/TUC/ParallelCompArch/Proj1/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_48355.dir/feature_tests.c.o
-/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_48355.dir/feature_tests.c.o   -c /hdd/TUC/ParallelCompArch/Proj1/cmake-build-debug/CMakeFiles/feature_tests.c
-Linking C executable cmTC_48355
-/home/almidi/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/173.4548.31/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_48355.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_48355.dir/feature_tests.c.o  -o cmTC_48355 
-make[1]: Leaving directory '/run/media/almidi/21D1D5FD39B737C9/TUC/ParallelCompArch/Proj1/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_596a0/fast"
+/usr/bin/make -f CMakeFiles/cmTC_596a0.dir/build.make CMakeFiles/cmTC_596a0.dir/build
+make[1]: Entering directory '/run/media/almidi/21D1D5FD39B737C9/TUC/ParallelCompArch/ParallelComputerArchitecture/Project1/Proj1/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_596a0.dir/feature_tests.c.o
+/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_596a0.dir/feature_tests.c.o   -c /hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project1/Proj1/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_596a0
+/home/almidi/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/173.4548.31/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_596a0.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_596a0.dir/feature_tests.c.o  -o cmTC_596a0 
+make[1]: Leaving directory '/run/media/almidi/21D1D5FD39B737C9/TUC/ParallelCompArch/ParallelComputerArchitecture/Project1/Proj1/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -148,17 +148,17 @@ make[1]: Leaving directory '/run/media/almidi/21D1D5FD39B737C9/TUC/ParallelCompA
 
 
 Detecting C [-std=c99] compiler features compiled with the following output:
-Change Dir: /hdd/TUC/ParallelCompArch/Proj1/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project1/Proj1/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_bb3b2/fast"
-/usr/bin/make -f CMakeFiles/cmTC_bb3b2.dir/build.make CMakeFiles/cmTC_bb3b2.dir/build
-make[1]: Entering directory '/run/media/almidi/21D1D5FD39B737C9/TUC/ParallelCompArch/Proj1/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_bb3b2.dir/feature_tests.c.o
-/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_bb3b2.dir/feature_tests.c.o   -c /hdd/TUC/ParallelCompArch/Proj1/cmake-build-debug/CMakeFiles/feature_tests.c
-Linking C executable cmTC_bb3b2
-/home/almidi/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/173.4548.31/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bb3b2.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_bb3b2.dir/feature_tests.c.o  -o cmTC_bb3b2 
-make[1]: Leaving directory '/run/media/almidi/21D1D5FD39B737C9/TUC/ParallelCompArch/Proj1/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_db142/fast"
+/usr/bin/make -f CMakeFiles/cmTC_db142.dir/build.make CMakeFiles/cmTC_db142.dir/build
+make[1]: Entering directory '/run/media/almidi/21D1D5FD39B737C9/TUC/ParallelCompArch/ParallelComputerArchitecture/Project1/Proj1/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_db142.dir/feature_tests.c.o
+/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_db142.dir/feature_tests.c.o   -c /hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project1/Proj1/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_db142
+/home/almidi/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/173.4548.31/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_db142.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_db142.dir/feature_tests.c.o  -o cmTC_db142 
+make[1]: Leaving directory '/run/media/almidi/21D1D5FD39B737C9/TUC/ParallelCompArch/ParallelComputerArchitecture/Project1/Proj1/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes
@@ -168,17 +168,17 @@ make[1]: Leaving directory '/run/media/almidi/21D1D5FD39B737C9/TUC/ParallelCompA
 
 
 Detecting C [-std=c90] compiler features compiled with the following output:
-Change Dir: /hdd/TUC/ParallelCompArch/Proj1/cmake-build-debug/CMakeFiles/CMakeTmp
+Change Dir: /hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project1/Proj1/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_654f9/fast"
-/usr/bin/make -f CMakeFiles/cmTC_654f9.dir/build.make CMakeFiles/cmTC_654f9.dir/build
-make[1]: Entering directory '/run/media/almidi/21D1D5FD39B737C9/TUC/ParallelCompArch/Proj1/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_654f9.dir/feature_tests.c.o
-/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_654f9.dir/feature_tests.c.o   -c /hdd/TUC/ParallelCompArch/Proj1/cmake-build-debug/CMakeFiles/feature_tests.c
-Linking C executable cmTC_654f9
-/home/almidi/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/173.4548.31/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_654f9.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_654f9.dir/feature_tests.c.o  -o cmTC_654f9 
-make[1]: Leaving directory '/run/media/almidi/21D1D5FD39B737C9/TUC/ParallelCompArch/Proj1/cmake-build-debug/CMakeFiles/CMakeTmp'
+Run Build Command:"/usr/bin/make" "cmTC_0235c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_0235c.dir/build.make CMakeFiles/cmTC_0235c.dir/build
+make[1]: Entering directory '/run/media/almidi/21D1D5FD39B737C9/TUC/ParallelCompArch/ParallelComputerArchitecture/Project1/Proj1/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0235c.dir/feature_tests.c.o
+/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_0235c.dir/feature_tests.c.o   -c /hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project1/Proj1/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_0235c
+/home/almidi/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/173.4548.31/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0235c.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_0235c.dir/feature_tests.c.o  -o cmTC_0235c 
+make[1]: Leaving directory '/run/media/almidi/21D1D5FD39B737C9/TUC/ParallelCompArch/ParallelComputerArchitecture/Project1/Proj1/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
     Feature record: C_FEATURE:1c_function_prototypes

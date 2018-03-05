@@ -58,7 +58,7 @@ int main(int argc, char **argv) {
             dist[i][j] = hamming(l,a[i],b[j]);
             //printf("%d ",dist[i][j]);
         }
-        printf("\n");
+        //printf("\n");
     }
     return 0;
 }

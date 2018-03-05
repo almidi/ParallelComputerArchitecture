@@ -71,13 +71,20 @@ int main(int argc, char **argv) {
     }
 
 //  Calculate Hamming using t threads
-    #pragma omp parallel
-    {
-        int k = omp_get_thread_num();
-        for (int i=k ; i<m; i+=t){
-            for (int j=0;j<n;j++){
-                dist[i][j] = hamming(l,a[i],b[j]);
-            }
+//    #pragma omp parallel
+//    {
+//        int k = omp_get_thread_num();
+//        for (int i=k ; i<m; i+=t){
+//            for (int j=0;j<n;j++){
+//                dist[i][j] = hamming(l,a[i],b[j]);
+//            }
+//        }
+//    }
+
+    #pragma omp parallel for collapse(2)
+    for (int i=0 ; i<m; i++){
+        for (int j=0;j<n;j++){
+            dist[i][j] = hamming(l,a[i],b[j]);
         }
     }
 
@@ -89,7 +96,7 @@ int main(int argc, char **argv) {
 //        }
 //        printf("\n");
 //    }
-//    return 0;
+    return 0;
 
 }
 
@@ -97,6 +104,7 @@ int main(int argc, char **argv) {
 //Hamming Distance Calculator between two arrays of l size
 int hamming(int l , int* a, int* b){
     int k = 0;
+    //#pragma omp parallel for
     for (int i=0;i<l;i++){
         if (a[i] == b[i]){
             k++;

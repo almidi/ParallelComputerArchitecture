@@ -1,4 +1,4 @@
-/home/almidi/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/173.4548.31/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /hdd/TUC/ParallelCompArch/Proj1
+/home/almidi/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/173.4548.31/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project1/Proj1
 -- The C compiler identification is GNU 7.3.0
 -- Check for working C compiler: /usr/bin/cc
 -- Check for working C compiler: /usr/bin/cc -- works
@@ -8,4 +8,4 @@
 -- Detecting C compile features - done
 -- Configuring done
 -- Generating done
--- Build files have been written to: /hdd/TUC/ParallelCompArch/Proj1/cmake-build-debug
+-- Build files have been written to: /hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project1/Proj1/cmake-build-debug
