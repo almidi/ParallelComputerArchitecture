@@ -5,8 +5,10 @@
 
 int main(int argc, char **argv) {
     int m, n,l, t, i, j;             // m = A strings, n = B strings , l = string length
-    int **a, **b, **dist;    // Tables
+    int **a, **b, **distSerial , **distR , **distC, **distRC;    // Tables
     srand(time(NULL));          // init rand
+    clock_t start,timeA, timeB, timeC, timeD ;
+    float serialT , rowT, columnT, cellT ;
 
 
 //  Check arguments
@@ -32,9 +34,16 @@ int main(int argc, char **argv) {
 
 
 //  Init Tables
-    dist = malloc(m*sizeof(int*));
+    distSerial = malloc(m*sizeof(int*));
+    distC = malloc(m*sizeof(int*));
+    distR = malloc(m*sizeof(int*));
+    distRC = malloc(m*sizeof(int*));
+
     for (i=0;i<m;i++){
-        dist[i]=malloc(n*sizeof(int));
+        distSerial[i]=malloc(n*sizeof(int));
+        distR[i]=malloc(n*sizeof(int));
+        distC[i]=malloc(n*sizeof(int));
+        distRC[i]=malloc(n*sizeof(int));
     }
 
     a = malloc(m*sizeof(int*));
@@ -48,54 +57,98 @@ int main(int argc, char **argv) {
     }
 
 
-//  init A set using t threads
-    #pragma omp parallel
-    {
-        int k = omp_get_thread_num();
-        for (int i=k;i<m;i+=t) {
-            for (int j = 0; j < l; j++) {
-                a[i][j] = rand() % 2; // random number between 0 and 1
-            }
+
+//  init A set
+    for (int i=0;i<m;i++) {
+        for (int j = 0; j < l; j++) {
+            a[i][j] = rand() % 2; // random number between 0 and 1
         }
     }
 
-//  init B set using t threads
-    #pragma omp parallel
-    {
-        int k = omp_get_thread_num();
-        for (int i=k;i<n;i+=t) {
-            for (int j = 0; j < l; j++) {
-                b[i][j] = rand() % 2; // random number between 0 and 1
-            }
+
+//  init B set
+    for (int i=0;i<n;i++) {
+        for (int j = 0; j < l; j++) {
+            b[i][j] = rand() % 2; // random number between 0 and 1
         }
     }
 
-//  Calculate Hamming using t threads
-//    #pragma omp parallel
-//    {
-//        int k = omp_get_thread_num();
-//        for (int i=k ; i<m; i+=t){
-//            for (int j=0;j<n;j++){
-//                dist[i][j] = hamming(l,a[i],b[j]);
-//            }
-//        }
-//    }
+//  HAMMING
 
+    start = clock();
+
+//    No Parallelization
+    for (i=0 ; i<m; i++){
+        for (j=0;j<n;j++){
+            distSerial[i][j] = hamming(l,a[i],b[j]);
+        }
+    }
+
+    timeA = clock();
+
+//    Parallelize each row
+    #pragma omp parallel for
+    for (int i=0 ; i<m; i++){
+        for (int j=0;j<n;j++){
+            distR[i][j] = hamming(l,a[i],b[j]);
+        }
+    }
+
+//    #pragma omp barrier
+    timeB = clock();
+
+//    Parallelize each column
+    #pragma omp parallel for collapse(1)
+    for (int j=0 ; j<n; j++){
+        for (int i=0;i<m;i++){
+            distC[i][j] = hamming(l,a[i],b[j]);
+        }
+    }
+//    #pragma omp barrier
+    timeC = clock();
+
+//    Parallelize each cell
     #pragma omp parallel for collapse(2)
     for (int i=0 ; i<m; i++){
         for (int j=0;j<n;j++){
-            dist[i][j] = hamming(l,a[i],b[j]);
+            distRC[i][j] = hamming(l,a[i],b[j]);
+        }
+    }
+//    #pragma omp barrier
+    timeD = clock();
+
+
+//  Check Hamming Distances
+    for (i=0 ; i<m; i++){
+        for (j=0;j<n;j++){
+            if (distSerial[i][j] != distR[i][j]){
+                printf("Row Parallelization Data Mismatch");
+                return (-1);
+            }
+            if (distSerial[i][j] != distC[i][j]){
+                printf("Column Parallelization Data Mismatch");
+                return (-1);
+            }
+            if (distSerial[i][j] != distRC[i][j]){
+                printf("Cell Parallelization Data Mismatch");
+                return (-1);
+            }
         }
     }
 
 
-//  Print Hamming Distances
-//    for (i=0 ; i<m; i++){
-//        for (j=0;j<n;j++){
-//            printf("%d ",dist[i][j]);
-//        }
-//        printf("\n");
-//    }
+
+    serialT = (float)((timeA - start) * 1000)/ CLOCKS_PER_SEC;
+    rowT = (float)((timeB - timeA) * 1000)/ CLOCKS_PER_SEC;
+    columnT = (float)((timeC - timeB) * 1000)/ CLOCKS_PER_SEC;
+    cellT = (float)((timeD - timeC) * 1000)/ CLOCKS_PER_SEC;
+
+
+    printf("\nSerial    Time :%f ms.",serialT);
+    printf("\nRow       Time :%f ms.",rowT);
+    printf("\nColumn    Time :%f ms.",columnT);
+    printf("\nCell      Time :%f ms.",cellT);
+
     return 0;
 
 }
@@ -104,7 +157,6 @@ int main(int argc, char **argv) {
 //Hamming Distance Calculator between two arrays of l size
 int hamming(int l , int* a, int* b){
     int k = 0;
-    //#pragma omp parallel for
     for (int i=0;i<l;i++){
         if (a[i] == b[i]){
             k++;
@@ -112,3 +164,4 @@ int hamming(int l , int* a, int* b){
     }
     return k;
 }
+
