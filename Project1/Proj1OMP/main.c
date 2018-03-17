@@ -52,6 +52,14 @@ int main(int argc, char **argv) {
         distH[i]=malloc(n*sizeof(int));
     }
 
+    for (i=0 ; i<m; i++){
+        for (j=0;j<n;j++){
+            distR[i][j] = 0;
+            distC[i][j] = 0;
+            distH[i][j] = 0;
+        }
+    }
+
     a = malloc(m*sizeof(int*));
     for (i=0;i<m;i++){
         a[i]=malloc(l*sizeof(int));
@@ -118,12 +126,19 @@ int main(int argc, char **argv) {
 //  Parallelize each string
 //  Each task takes a character from a string from array "a" and processes it
 //  with the corresponding character from a string in array "b".
+
+    for (i=0 ; i<m; i++){
+        for (j=0;j<n;j++){
+            distH[i][j] = 0;
+        }
+    }
+
+
     #pragma omp parallel for collapse(3) private(i,j,k)
     for (i=0 ; i<m; i++){
         for (j=0;j<n;j++){
             for (k=0;k<l;k++){
                 if (a[i][k] != b[j][k]){
-
                     distH[i][j]++;
                 }
             }
@@ -165,7 +180,6 @@ int main(int argc, char **argv) {
     printf("\n  Char: %d ms\n",cellT);
 
     return 0;
-
 
 }
 

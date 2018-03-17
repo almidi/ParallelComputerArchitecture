@@ -1,5 +1,5 @@
-/home/almidi/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/173.4548.31/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project1/Proj1OMP
--- The C compiler identification is GNU 7.3.0
+/home/almidi/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.4203.106/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/almidi/Documents/ParallelComputerArchitecture/Project1/Proj1OMP
+-- The C compiler identification is GNU 7.2.0
 -- Check for working C compiler: /usr/bin/cc
 -- Check for working C compiler: /usr/bin/cc -- works
 -- Detecting C compiler ABI info
@@ -7,6 +7,7 @@
 -- Detecting C compile features
 -- Detecting C compile features - done
 -- Found OpenMP_C: -fopenmp (found version "4.5") 
+-- Found OpenMP: TRUE (found version "4.5")  
 -- Configuring done
 -- Generating done
--- Build files have been written to: /hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project1/Proj1OMP/cmake-build-debug
+-- Build files have been written to: /home/almidi/Documents/ParallelComputerArchitecture/Project1/Proj1OMP/cmake-build-debug
