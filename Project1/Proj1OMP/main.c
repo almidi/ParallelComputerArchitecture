@@ -8,7 +8,7 @@ int timedif(struct timespec *start, struct timespec *stop);
 
 
 int main(int argc, char **argv) {
-    int m, n,l, t, i, j, k;             // m = A strings, n = B strings , l = string length
+    int m, n,l, t, i, j, k, distSumR = 0, distSumC = 0, distSumH = 0;             // m = A strings, n = B strings , l = string length
     int **a, **b, **distSerial , **distR , **distC, **distH;    // Tables
     srand(time(NULL));          // init rand
     struct timespec start,timeA, timeB, timeC, timeD ;
@@ -106,6 +106,7 @@ int main(int argc, char **argv) {
     for (i=0 ; i<m; i++){
         for (j=0;j<n;j++){
             distR[i][j] = hamming(l,a[i],b[j]);
+            distSumR+=distR[i][j];
         }
     }
 
@@ -118,6 +119,7 @@ int main(int argc, char **argv) {
     for (i=0 ; i<m; i++){
         for (j=0;j<n;j++){
             distC[i][j] = hamming(l,a[i],b[j]);
+            distSumC+=distC[i][j];
         }
     }
 
@@ -130,6 +132,7 @@ int main(int argc, char **argv) {
     for (i=0 ; i<m; i++){
         for (j=0;j<n;j++){
             distH[i][j] = 0;
+            distSumH+=distH[i][j];
         }
     }
 
@@ -178,6 +181,8 @@ int main(int argc, char **argv) {
     printf("\n   Row: %d ms",rowT);
     printf("\nColumn: %d ms",columnT);
     printf("\n  Char: %d ms\n",cellT);
+
+    printf("\nHamming Distance Sum: %d", distSumC) ;
 
     return 0;
 
