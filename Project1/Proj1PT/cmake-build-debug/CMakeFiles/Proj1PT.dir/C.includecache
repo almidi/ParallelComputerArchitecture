@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project1/Proj1PT/main.c
+stdio.h
+-
+stdlib.h
+-
+time.h
+-
+

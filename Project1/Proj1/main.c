@@ -3,7 +3,7 @@
 #include <time.h>
 
 int main(int argc, char **argv) {
-    int m,n,l,i,j ;             // m = A strings, n = B strings , l = string length
+    int m,n,l,i,j, k ;             // m = A strings, n = B strings , l = string length
     int **a , **b , **dist ;    // Tables
     srand(time(NULL));          // init rand
 
@@ -53,13 +53,18 @@ int main(int argc, char **argv) {
             b[i][j] = rand() % 2 ; // random number between 0 and 1
         }
     }
+
+    k = 0;
+
     for (i=0 ; i<m; i++){
         for (j=0;j<n;j++){
             dist[i][j] = hamming(l,a[i],b[j]);
-            //printf("%d ",dist[i][j]);
+            k += dist[i][j];
         }
-        //printf("\n");
     }
+
+    printf("\nHamming Distance Sum: %d", k) ;
+
     return 0;
 }
 
