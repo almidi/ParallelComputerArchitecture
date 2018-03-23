@@ -10,8 +10,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "../CMakeLists.txt"
   "CMakeFiles/3.9.6/CMakeCCompiler.cmake"
   "CMakeFiles/3.9.6/CMakeSystem.cmake"
-  "CMakeFiles/FindOpenMP/OpenMPCheckVersion.c"
-  "CMakeFiles/FindOpenMP/OpenMPTryFlag.c"
   "CMakeFiles/feature_tests.c"
   "/home/almidi/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/173.4548.31/bin/cmake/share/cmake-3.9/Modules/CMakeCCompiler.cmake.in"
   "/home/almidi/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/173.4548.31/bin/cmake/share/cmake-3.9/Modules/CMakeCCompilerABI.c"
@@ -73,9 +71,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/almidi/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/173.4548.31/bin/cmake/share/cmake-3.9/Modules/Compiler/Watcom-DetermineCompiler.cmake"
   "/home/almidi/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/173.4548.31/bin/cmake/share/cmake-3.9/Modules/Compiler/XL-C-DetermineCompiler.cmake"
   "/home/almidi/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/173.4548.31/bin/cmake/share/cmake-3.9/Modules/Compiler/zOS-C-DetermineCompiler.cmake"
-  "/home/almidi/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/173.4548.31/bin/cmake/share/cmake-3.9/Modules/FindOpenMP.cmake"
-  "/home/almidi/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/173.4548.31/bin/cmake/share/cmake-3.9/Modules/FindPackageHandleStandardArgs.cmake"
-  "/home/almidi/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/173.4548.31/bin/cmake/share/cmake-3.9/Modules/FindPackageMessage.cmake"
   "/home/almidi/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/173.4548.31/bin/cmake/share/cmake-3.9/Modules/Internal/FeatureTesting.cmake"
   "/home/almidi/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/173.4548.31/bin/cmake/share/cmake-3.9/Modules/Platform/Linux-GNU-C.cmake"
   "/home/almidi/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/173.4548.31/bin/cmake/share/cmake-3.9/Modules/Platform/Linux-GNU.cmake"
@@ -100,5 +95,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/Proj1OMP.dir/DependInfo.cmake"
+  "CMakeFiles/Proj1PT.dir/DependInfo.cmake"
   )

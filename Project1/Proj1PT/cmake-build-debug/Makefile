@@ -48,10 +48,10 @@ RM = /home/almidi/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/173.4548.31/bin
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project1/Proj1OMP
+CMAKE_SOURCE_DIR = /hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project1/Proj1PT
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project1/Proj1OMP/cmake-build-debug
+CMAKE_BINARY_DIR = /hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project1/Proj1PT/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project1/Proj1OMP/cmake-build-debug/CMakeFiles /hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project1/Proj1OMP/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project1/Proj1PT/cmake-build-debug/CMakeFiles /hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project1/Proj1PT/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project1/Proj1OMP/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project1/Proj1PT/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,17 +111,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Proj1OMP
+# Target rules for targets named Proj1PT
 
 # Build rule for target.
-Proj1OMP: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Proj1OMP
-.PHONY : Proj1OMP
+Proj1PT: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 Proj1PT
+.PHONY : Proj1PT
 
 # fast build rule for target.
-Proj1OMP/fast:
-	$(MAKE) -f CMakeFiles/Proj1OMP.dir/build.make CMakeFiles/Proj1OMP.dir/build
-.PHONY : Proj1OMP/fast
+Proj1PT/fast:
+	$(MAKE) -f CMakeFiles/Proj1PT.dir/build.make CMakeFiles/Proj1PT.dir/build
+.PHONY : Proj1PT/fast
 
 main.o: main.c.o
 
@@ -129,7 +129,7 @@ main.o: main.c.o
 
 # target to build an object file
 main.c.o:
-	$(MAKE) -f CMakeFiles/Proj1OMP.dir/build.make CMakeFiles/Proj1OMP.dir/main.c.o
+	$(MAKE) -f CMakeFiles/Proj1PT.dir/build.make CMakeFiles/Proj1PT.dir/main.c.o
 .PHONY : main.c.o
 
 main.i: main.c.i
@@ -138,7 +138,7 @@ main.i: main.c.i
 
 # target to preprocess a source file
 main.c.i:
-	$(MAKE) -f CMakeFiles/Proj1OMP.dir/build.make CMakeFiles/Proj1OMP.dir/main.c.i
+	$(MAKE) -f CMakeFiles/Proj1PT.dir/build.make CMakeFiles/Proj1PT.dir/main.c.i
 .PHONY : main.c.i
 
 main.s: main.c.s
@@ -147,7 +147,7 @@ main.s: main.c.s
 
 # target to generate assembly for a file
 main.c.s:
-	$(MAKE) -f CMakeFiles/Proj1OMP.dir/build.make CMakeFiles/Proj1OMP.dir/main.c.s
+	$(MAKE) -f CMakeFiles/Proj1PT.dir/build.make CMakeFiles/Proj1PT.dir/main.c.s
 .PHONY : main.c.s
 
 # Help Target
@@ -158,7 +158,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... Proj1OMP"
+	@echo "... Proj1PT"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
