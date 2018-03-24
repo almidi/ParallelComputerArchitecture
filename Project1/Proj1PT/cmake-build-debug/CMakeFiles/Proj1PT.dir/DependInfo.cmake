@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project1/Proj1PT/main.c" "/hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project1/Proj1PT/cmake-build-debug/CMakeFiles/Proj1PT.dir/main.c.o"
+  "/home/almidi/TUC/ParallelComputerArchitecture/Project1/Proj1PT/main.c" "/home/almidi/TUC/ParallelComputerArchitecture/Project1/Proj1PT/cmake-build-debug/CMakeFiles/Proj1PT.dir/main.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 
