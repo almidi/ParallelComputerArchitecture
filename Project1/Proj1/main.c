@@ -72,7 +72,7 @@ int main(int argc, char **argv) {
 int hamming(int l , int* a, int* b){
     int k = 0;
     for (int i=0;i<l;i++){
-        if (a[i] == b[i]){
+        if (a[i] != b[i]){
             k++;
         }
     }
