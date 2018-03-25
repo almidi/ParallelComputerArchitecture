@@ -13,6 +13,7 @@ int main(int argc, char **argv) {
     srand(time(NULL));          // init rand
     struct timespec start,timeA, timeB, timeC, timeD ;
     int  serialT , rowT, columnT, cellT ;
+    omp_lock_t **locks;
 
 
 //  Check arguments
@@ -39,17 +40,19 @@ int main(int argc, char **argv) {
 
 
 
-//  Init Tables
-    distSerial = malloc(m*sizeof(int*));
-    distC = malloc(m*sizeof(int*));
-    distR = malloc(m*sizeof(int*));
-    distH = malloc(m*sizeof(int*));
+//  Allocate Tables
+    distSerial = malloc(m*sizeof(int**));
+    distC = malloc(m*sizeof(int**));
+    distR = malloc(m*sizeof(int**));
+    distH = malloc(m*sizeof(int**));
+    locks = malloc(m*sizeof(omp_lock_t**));
 
     for (i=0;i<m;i++){
         distSerial[i]=malloc(n*sizeof(int));
         distR[i]=malloc(n*sizeof(int));
         distC[i]=malloc(n*sizeof(int));
         distH[i]=malloc(n*sizeof(int));
+        locks[i]=malloc(n*sizeof(omp_lock_t*));
     }
 
     for (i=0 ; i<m; i++){
@@ -71,6 +74,8 @@ int main(int argc, char **argv) {
     }
 
 
+
+
 //  init A set
     for (int i=0;i<m;i++) {
         for (int j = 0; j < l; j++) {
@@ -85,6 +90,15 @@ int main(int argc, char **argv) {
             b[i][j] = rand() % 2; // random number between 0 and 1
         }
     }
+
+//  init distH and thread locks
+    for (i=0 ; i<m; i++){
+        for (j=0;j<n;j++){
+            distH[i][j] = 0;
+            omp_init_lock(&locks[i][j]);
+        }
+    }
+
 
 //  HAMMING
 
@@ -129,26 +143,30 @@ int main(int argc, char **argv) {
 //  Each task takes a character from a string from array "a" and processes it
 //  with the corresponding character from a string in array "b".
 
-    for (i=0 ; i<m; i++){
-        for (j=0;j<n;j++){
-            distH[i][j] = 0;
-            distSumH+=distH[i][j];
-        }
-    }
-
 
     #pragma omp parallel for collapse(3) private(i,j,k)
     for (i=0 ; i<m; i++){
         for (j=0;j<n;j++){
             for (k=0;k<l;k++){
                 if (a[i][k] != b[j][k]){
+                    //set lock for string
+                    omp_set_lock(&locks[i][j]);
+                    //increase strings hamming distance
                     distH[i][j]++;
+                    //unset lock for string
+                    omp_unset_lock(&locks[i][j]);
                 }
             }
         }
     }
 
     clock_gettime(CLOCK_REALTIME,&timeD);
+
+    for (i=0 ; i<m; i++){
+        for (j=0;j<n;j++){
+            distSumH+=distH[i][j];
+        }
+    }
 
 //  Check Hamming Distances
     for (i=0 ; i<m; i++){
@@ -201,7 +219,7 @@ int hamming(int l , int* a, int* b){
 
 
 int timedif(struct timespec *start, struct timespec *stop){
-    return((int)((stop->tv_sec - start->tv_sec)*1000)+(float)((stop->tv_nsec - start->tv_nsec)/1000000));
+    return((int)((stop->tv_sec - start->tv_sec)*1000)+(int)((stop->tv_nsec - start->tv_nsec)/1000000));
 }
 
 

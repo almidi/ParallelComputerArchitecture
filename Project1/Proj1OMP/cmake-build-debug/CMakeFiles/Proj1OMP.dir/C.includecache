@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project1/Proj1OMP/main.c
+/home/almidi/TUC/ParallelComputerArchitecture/Project1/Proj1OMP/main.c
 stdio.h
 -
 stdlib.h
