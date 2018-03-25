@@ -1,4 +1,4 @@
-# Install script for directory: /home/almidi/TUC/ParallelComputerArchitecture/Project1/Proj1PT
+# Install script for directory: /hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project1/Proj1PT
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/almidi/TUC/ParallelComputerArchitecture/Project1/Proj1PT/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project1/Proj1PT/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

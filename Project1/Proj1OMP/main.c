@@ -9,10 +9,10 @@ int timedif(struct timespec *start, struct timespec *stop);
 
 int main(int argc, char **argv) {
     int m, n,l, t, i, j, k, distSumR = 0, distSumC = 0, distSumH = 0;             // m = A strings, n = B strings , l = string length
-    int **a, **b, **distSerial , **distR , **distC, **distH;    // Tables
+    int **a, **b, **distSerial , **distR , **distC, **distCH;    // Tables
     srand(time(NULL));          // init rand
     struct timespec start,timeA, timeB, timeC, timeD ;
-    int  serialT , rowT, columnT, cellT ;
+    int  serialT , rowT, cellT, charT ;
     omp_lock_t **locks;
 
 
@@ -39,19 +39,18 @@ int main(int argc, char **argv) {
     omp_set_num_threads(t);
 
 
-
 //  Allocate Tables
     distSerial = malloc(m*sizeof(int**));
     distC = malloc(m*sizeof(int**));
     distR = malloc(m*sizeof(int**));
-    distH = malloc(m*sizeof(int**));
+    distCH = malloc(m*sizeof(int**));
     locks = malloc(m*sizeof(omp_lock_t**));
 
     for (i=0;i<m;i++){
         distSerial[i]=malloc(n*sizeof(int));
         distR[i]=malloc(n*sizeof(int));
         distC[i]=malloc(n*sizeof(int));
-        distH[i]=malloc(n*sizeof(int));
+        distCH[i]=malloc(n*sizeof(int));
         locks[i]=malloc(n*sizeof(omp_lock_t*));
     }
 
@@ -59,7 +58,7 @@ int main(int argc, char **argv) {
         for (j=0;j<n;j++){
             distR[i][j] = 0;
             distC[i][j] = 0;
-            distH[i][j] = 0;
+            distCH[i][j] = 0;
         }
     }
 
@@ -91,10 +90,10 @@ int main(int argc, char **argv) {
         }
     }
 
-//  init distH and thread locks
+//  init distCH and thread locks
     for (i=0 ; i<m; i++){
         for (j=0;j<n;j++){
-            distH[i][j] = 0;
+            distCH[i][j] = 0;
             omp_init_lock(&locks[i][j]);
         }
     }
@@ -116,7 +115,7 @@ int main(int argc, char **argv) {
 //  Parallelize each row
 //  Each task take a string from array "a" and
 //  processes it with every string from array "b".
-    #pragma omp parallel for schedule(dynamic) private(j)
+    #pragma omp parallel for schedule(dynamic) private(j) shared(a,b,distR)
     for (i=0 ; i<m; i++){
         for (j=0;j<n;j++){
             distR[i][j] = hamming(l,a[i],b[j]);
@@ -129,7 +128,7 @@ int main(int argc, char **argv) {
 //  Parallelize each cell
 //  Each task takes a  string from array "a" and
 //  processes it with a string from array "b".
-    #pragma omp parallel for collapse(2) private(i,j)
+    #pragma omp parallel for schedule(dynamic) collapse(2) private(i,j) shared(a,b,distC)
     for (i=0 ; i<m; i++){
         for (j=0;j<n;j++){
             distC[i][j] = hamming(l,a[i],b[j]);
@@ -142,17 +141,20 @@ int main(int argc, char **argv) {
 //  Parallelize each string
 //  Each task takes a character from a string from array "a" and processes it
 //  with the corresponding character from a string in array "b".
+    
 
-
-    #pragma omp parallel for collapse(3) private(i,j,k)
+    #pragma omp parallel for private(i,j,k) shared(a,b,distCH,locks)
     for (i=0 ; i<m; i++){
+        #pragma omp parallel for private(j,k) shared(a,b,distCH,locks)
         for (j=0;j<n;j++){
+            #pragma omp parallel for private(k) shared(a,b,distCH,locks)
             for (k=0;k<l;k++){
-                if (a[i][k] != b[j][k]){
+                if (a[i][k] != b[j][k]) {
                     //set lock for string
                     omp_set_lock(&locks[i][j]);
                     //increase strings hamming distance
-                    distH[i][j]++;
+                    //#pragma omp atomic update
+                    distCH[i][j]++;
                     //unset lock for string
                     omp_unset_lock(&locks[i][j]);
                 }
@@ -160,11 +162,12 @@ int main(int argc, char **argv) {
         }
     }
 
+
     clock_gettime(CLOCK_REALTIME,&timeD);
 
     for (i=0 ; i<m; i++){
         for (j=0;j<n;j++){
-            distSumH+=distH[i][j];
+            distSumH+=distCH[i][j];
         }
     }
 
@@ -179,8 +182,8 @@ int main(int argc, char **argv) {
                 printf("Cell Parallelization Data Mismatch");
                 return (-1);
             }
-            if (distSerial[i][j] != distH[i][j]){
-                printf("String Parallelization Data Mismatch");
+            if (distSerial[i][j] != distCH[i][j]){
+                printf("Character Parallelization Data Mismatch");
                 return (-1);
             }
         }
@@ -189,16 +192,16 @@ int main(int argc, char **argv) {
 //  Calculate excecution times
     serialT =  timedif(&start,&timeA);
     rowT = timedif(&timeA,&timeB);
-    columnT = timedif(&timeB,&timeC);
-    cellT = timedif(&timeC,&timeD);
+    cellT = timedif(&timeB,&timeC);
+    charT = timedif(&timeC,&timeD);
 
 //  Print excecution times
     printf("\nComputation Times");
     printf("\n-------------------");
     printf("\nSerial: %d ms",serialT);
     printf("\n   Row: %d ms",rowT);
-    printf("\nColumn: %d ms",columnT);
-    printf("\n  Char: %d ms\n",cellT);
+    printf("\n  cell: %d ms",cellT);
+    printf("\n  Char: %d ms\n",charT);
 
     printf("\nHamming Distance Sum: %d", distSumC) ;
 
