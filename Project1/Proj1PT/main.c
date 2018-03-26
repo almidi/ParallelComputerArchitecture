@@ -37,45 +37,28 @@ struct charThreadData {
     int cell;
     int **distCH;
 };
-int **a, **b, l;
-int main(int argc, char **argv) {
-    int m, n, l, t, i, j;             // m = A strings, n = B strings , l = string length
-//    int **a, **b, **distSerial, **distR, **distC, **distCH;    // Tables
-    int **distSerial, **distR, **distC, **distCH;    // Tables
-    struct timespec start, end;
-    srand(time(NULL));          // init rand
+int **a, **b, l, m, n, t;
+int **distSerial, **distR, **distC, **distCH;    // Tables
 
-    //Thread data
-    struct rowThreadData *rowTD;
-    struct cellThreadData *cellTD;
-    struct charThreadData *charTD;
+//Thread data
+struct rowThreadData *rowTD;
+struct cellThreadData *cellTD;
+struct charThreadData *charTD;
 
-    //Threads
-    pthread_t *rowT;
-    pthread_t *cellT;
-    pthread_t *charT;
+//Threads
+pthread_t *rowT;
+pthread_t *cellT;
+pthread_t *charT;
 
+pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
+pthread_mutex_t counterMutex = PTHREAD_MUTEX_INITIALIZER;
+pthread_cond_t cond;
+int threadCounter = 0;
 
-//  Check arguments
-    if (argc != 5) {
-        printf("Invalid Arguments");
-        return -1;
-    }
+struct timespec start, end;
 
-//  Assign Arguments
-    m = atoi(argv[1]);
-    n = atoi(argv[2]);
-    l = atoi(argv[3]);
-    t = atoi(argv[4]);
-
-    printf("\nArguments");
-    printf("\n-------------------");
-    printf("\n     m: %d", m);
-    printf("\n     n: %d", n);
-    printf("\n     l: %d", l);
-    printf("\n     t: %d\n", t);
-
-//  Init Tables
+void initTables() {
+    int i, j;
     distSerial = malloc(m * sizeof(int *));
     distC = malloc(m * sizeof(int *));
     distR = malloc(m * sizeof(int *));
@@ -125,35 +108,80 @@ int main(int argc, char **argv) {
             b[i][j] = rand() % 2; // random number between 0 and 1
         }
     }
-
-    printf("\n\nCalculation");
-//  Calculate Serial Hamming
-//    clock_gettime(CLOCK_REALTIME,&start);
-//    for (i = 0; i < m; i++) {
-//        for (j = 0; j < n; j++) {
-//            distSerial[i][j] = hamming(l, a[i], b[j]);
-//        }
-//    }
-//    clock_gettime(CLOCK_REALTIME,&end);
-//    printf("\nSerial: %d ms", timedif(&start,&end));
-
-//  Calculate Serial Hamming, Parallelize each row
+}
+void serialHamming(){
+    int i,j;
     clock_gettime(CLOCK_REALTIME,&start);
     for (i = 0; i < m; i++) {
+        for (j = 0; j < n; j++) {
+            distSerial[i][j] = hamming(a[i], b[j]);
+        }
+    }
+    clock_gettime(CLOCK_REALTIME,&end);
+    printf("Serial: %d ms\n", timedif(&start,&end));
+}
+
+int main(int argc, char **argv) {
+    int i, j;             // m = A strings, n = B strings , l = string length
+    srand(time(NULL));          // init rand
+
+//  Check arguments
+    if (argc != 5) {
+        printf("Invalid Arguments");
+        return -1;
+    }
+
+//  Assign Arguments
+    m = atoi(argv[1]);
+    n = atoi(argv[2]);
+    l = atoi(argv[3]);
+    t = atoi(argv[4]);
+
+    printf("\nArguments");
+    printf("\n-------------------");
+    printf("\n     m: %d", m);
+    printf("\n     n: %d", n);
+    printf("\n     l: %d", l);
+    printf("\n     t: %d\n", t);
+
+    initTables();
+    printf("\n\nCalculation\n");
+//  Calculate Serial Hamming
+//    serialHamming();
+
+
+    pthread_mutex_init(&mutex, NULL);
+    pthread_mutex_init(&counterMutex, NULL);
+    pthread_cond_init(&cond, 0);
+
+//  Calculate Hamming, Parallelize each row
+    clock_gettime(CLOCK_REALTIME, &start);
+    for (i = 0; i < m; i++) {
+//        if((i/m)*100%10==0){
+//            printf(".");
+//            fflush(stdout);
+//        }
         rowTD[i].tid = i;
         rowTD[i].row = i;
-//        rowTD[i].a = a;
-//        rowTD[i].b = b;
         rowTD[i].distR = distR;
-//        rowTD[i].l = l;
         rowTD[i].n = n;
+        while(threadCounter==t){
+            printf("Cond Wait %d\n", threadCounter);
+            pthread_cond_wait(&cond, &mutex);
+            printf("Cond awakened %d\n", threadCounter);
+        }
+//        printf("Cond awakened %d\n", threadCounter);
+        pthread_mutex_lock(&counterMutex);
+        threadCounter++;
+        pthread_mutex_unlock(&counterMutex);
         pthread_create(&rowT[i], NULL, rowThread, (void *) &rowTD[i]);
     }
     for (i = 0; i < m; i++) {
-        pthread_join(&rowT[i], NULL);
+        printf("Joining Thread: %d\n", i);
+        pthread_join(rowT[i], NULL);
     }
-    clock_gettime(CLOCK_REALTIME,&end);
-    printf("\nRow: %d ms", timedif(&start,&end));
+    clock_gettime(CLOCK_REALTIME, &end);
+    printf("\nRow: %d ms", timedif(&start, &end));
 
 
     return 0;
@@ -164,17 +192,23 @@ void *rowThread(void *threadarg) {
     int **dist;
     int i, n, row;
     struct rowThreadData *args;
-
     args = (struct rowThreadData *) threadarg;
-    dist = args->distR;
+    dist = distR;
     n = args->n;
     row = args->row;
-    if(a[row]==NULL){
+    if (a[row] == NULL) {
         printf("Damn");
     }
     for (i = 0; i < n; i++) {
         dist[row][i] = hamming(a[row], b[i]);
     }
+    pthread_mutex_lock(&counterMutex);
+    threadCounter--;
+    pthread_mutex_unlock(&counterMutex);
+
+    pthread_mutex_unlock(&mutex);
+    pthread_cond_broadcast(&cond);
+    printf("Cond broadcast %d\n", threadCounter);
 }
 
 void *cellThread(void *threadarg) {
