@@ -19,9 +19,7 @@ int timedif(struct timespec *start, struct timespec *stop) {
 
 struct rowThreadData {
     int tid;
-    int n;
     int row;
-    int **distR;
 };
 
 struct cellThreadData {
@@ -157,14 +155,8 @@ int main(int argc, char **argv) {
 //  Calculate Hamming, Parallelize each row
     clock_gettime(CLOCK_REALTIME, &start);
     for (i = 0; i < m; i++) {
-//        if((i/m)*100%10==0){
-//            printf(".");
-//            fflush(stdout);
-//        }
         rowTD[i].tid = i;
         rowTD[i].row = i;
-        rowTD[i].distR = distR;
-        rowTD[i].n = n;
         while(threadCounter==t){
             printf("Cond Wait %d\n", threadCounter);
             pthread_cond_wait(&cond, &mutex);
@@ -182,25 +174,17 @@ int main(int argc, char **argv) {
     }
     clock_gettime(CLOCK_REALTIME, &end);
     printf("\nRow: %d ms", timedif(&start, &end));
-
-
     return 0;
 }
 
 
 void *rowThread(void *threadarg) {
-    int **dist;
-    int i, n, row;
+    int i, row;
     struct rowThreadData *args;
     args = (struct rowThreadData *) threadarg;
-    dist = distR;
-    n = args->n;
     row = args->row;
-    if (a[row] == NULL) {
-        printf("Damn");
-    }
     for (i = 0; i < n; i++) {
-        dist[row][i] = hamming(a[row], b[i]);
+        distR[row][i] = hamming(a[row], b[i]);
     }
     pthread_mutex_lock(&counterMutex);
     threadCounter--;
