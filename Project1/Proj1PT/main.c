@@ -142,10 +142,10 @@ int main(int argc, char **argv) {
     for (i = 0; i < m; i++) {
         rowTD[i].tid = i;
         rowTD[i].row = i;
-        rowTD[i].a = a;
-        rowTD[i].b = b;
+//        rowTD[i].a = a;
+//        rowTD[i].b = b;
         rowTD[i].distR = distR;
-        rowTD[i].l = l;
+//        rowTD[i].l = l;
         rowTD[i].n = n;
         pthread_create(&rowT[i], NULL, rowThread, (void *) &rowTD[i]);
     }
