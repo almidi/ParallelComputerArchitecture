@@ -186,22 +186,30 @@ void cellParallelizedHamming() {
     printf("- Parallel by Cell Execution: ");
     fflush(stdout);
     threadCounter = 0;
-    int index;
+    int threadCounterTmp;
+    u_int64_t index;
     clock_gettime(CLOCK_REALTIME, &start);
-    for (int i = 0; i < m; i++) {
-        for (int j = 0; j < n; j++) {
+    for (uint i = 0; i < m; i++) {
+        for (uint j = 0; j < n; j++) {
             index = i * j + j;
             cellTD[index].tid = i;
             cellTD[index].row = i;
             cellTD[index].col = j;
-            while (threadCounter == t) {
+            pthread_mutex_lock(&counterMutex);
+            threadCounterTmp = threadCounter;
+            pthread_mutex_unlock(&counterMutex);
+            while (threadCounterTmp == t) {
                 printf("Sleep %d\n", threadCounter);
                 pthread_cond_wait(&cond, &mutex);
+                pthread_mutex_lock(&counterMutex);
+                threadCounterTmp = threadCounter;
+                pthread_mutex_unlock(&counterMutex);
             }
             pthread_mutex_lock(&counterMutex);
             threadCounter++;
             pthread_mutex_unlock(&counterMutex);
             pthread_create(&cellT[index], NULL, cellThread, (void *) &cellTD[index]);
+            printf("Thread %d spawned\n", index);
         }
     }
     for (int i = 0; i < m * n; i++) {

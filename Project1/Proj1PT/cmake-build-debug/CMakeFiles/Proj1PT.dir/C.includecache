@@ -13,6 +13,4 @@ stdlib.h
 -
 pthread.h
 -
-time.h
--
 
