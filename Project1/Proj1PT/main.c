@@ -14,7 +14,6 @@ int **distSerial, **distR, **distC, **distCH;    // Tables
 
 //Threads
 pthread_t *pthread;
-
 pthread_mutex_t counterMutex = PTHREAD_MUTEX_INITIALIZER;
 pthread_mutex_t **cellMutex;
 
@@ -32,16 +31,7 @@ void initTables() {
     distC = malloc(m * sizeof(int *));
     distR = malloc(m * sizeof(int *));
     distCH = malloc(m * sizeof(int *));
-//    rowTD = malloc(m * sizeof(struct rowThreadData *));
-//    cellTD = malloc(m * n * sizeof(struct cellThreadData *));
-//    charTD = malloc(m * n * l * sizeof(struct charThreadData *));
-//    rowT = malloc(m * sizeof(struct pthread_t *));
-//    pthread = malloc(m * n * sizeof(struct pthread_t *));
-//    charT = malloc(m * n * l * sizeof(struct pthread_t *));
-
-//    rowT = malloc(t * sizeof(struct pthread_t *));
     pthread = malloc(t * sizeof(struct pthread_t *));
-//    charT = malloc(t * sizeof(struct pthread_t *));
     cellMutex = malloc(m * sizeof(pthread_mutex_t *));
 
     for (int i = 0; i < m; i++) {
@@ -118,7 +108,7 @@ void serialHamming() {
 u_int64_t taskCount, taskIndex;
 
 
-void *rowThreadTaskSharing(void *threadarg) {
+void *rowThread(void *threadarg) {
     int row;
     pthread_mutex_lock(&counterMutex);
     while (taskIndex < taskCount) {
@@ -133,7 +123,7 @@ void *rowThreadTaskSharing(void *threadarg) {
 }
 
 
-void *cellThreadTaskSharing(void *threadarg) {
+void *cellThread(void *threadarg) {
     int row, col;
     pthread_mutex_lock(&counterMutex);
     while (taskIndex < taskCount) {
@@ -148,7 +138,7 @@ void *cellThreadTaskSharing(void *threadarg) {
 }
 
 
-void *charThreadTaskSharing(void *threadarg) {
+void *charThread(void *threadarg) {
     int row, col, index;
     pthread_mutex_lock(&counterMutex);
     while (taskIndex < taskCount) {
@@ -198,11 +188,11 @@ void checkHammingResults() {
                 fflush(stderr);
                 exit(EXIT_FAILURE);
             }
-//            if (distSerial[i][j] != distCH[i][j]){
-//                fprintf(stderr, "Character Parallelization Data Mismatch\n");
-//                fflush(stderr);
-//                exit(EXIT_FAILURE);
-//            }
+            if (distSerial[i][j] != distCH[i][j]) {
+                fprintf(stderr, "Character Parallelization Data Mismatch\n");
+                fflush(stderr);
+                exit(EXIT_FAILURE);
+            }
         }
     }
 }
@@ -232,9 +222,9 @@ int main(int argc, char **argv) {
 
     printf("Calculation\n");
     serialHamming();
-    threadSpawner("- Parallel by Row Execution: ", rowThreadTaskSharing, (u_int64_t) n);
-    threadSpawner("- Parallel by Cell Execution: ", cellThreadTaskSharing, (u_int64_t) n * m);
-    threadSpawner("- Parallel by Char Execution: ", charThreadTaskSharing, (u_int64_t) n * m * l);
+    threadSpawner("- Parallel by Row Execution: ", rowThread, (u_int64_t) n);
+    threadSpawner("- Parallel by Cell Execution: ", cellThread, (u_int64_t) n * m);
+    threadSpawner("- Parallel by Char Execution: ", charThread, (u_int64_t) n * m * l);
 
     checkHammingResults();
     printf("\n");
