@@ -13,7 +13,6 @@
   <component name="ChangeListManager">
     <list default="true" id="218476c1-aa8d-4d01-91d6-5e5710594c87" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proj1PT.dir/C.includecache" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proj1PT.dir/C.includecache" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/Proj1PT" afterPath="$PROJECT_DIR$/cmake-build-debug/Proj1PT" />
       <change beforePath="$PROJECT_DIR$/main.c" afterPath="$PROJECT_DIR$/main.c" />
     </list>
@@ -31,23 +30,23 @@
       <file leaf-file-name="main.c" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="299" column="32" lean-forward="true" selection-start-line="299" selection-start-column="32" selection-end-line="299" selection-end-column="32" />
+            <state relative-caret-position="198">
+              <caret line="48" column="38" lean-forward="true" selection-start-line="48" selection-start-column="38" selection-end-line="48" selection-end-column="38" />
               <folding>
                 <element signature="e#75#125#1" expanded="false" />
                 <element signature="e#135#199#1" expanded="false" />
                 <element signature="e#210#289#1" expanded="false" />
                 <element signature="e#662#844#0" expanded="false" />
-                <element signature="e#847#2659#0" expanded="false" />
-                <element signature="e#2662#2888#0" expanded="false" />
-                <element signature="e#2891#3248#0" expanded="false" />
-                <element signature="e#3251#3657#0" expanded="false" />
-                <element signature="e#3660#4364#0" expanded="false" />
-                <element signature="e#4367#4868#0" expanded="false" />
-                <element signature="e#4871#6264#0" expanded="false" />
-                <element signature="e#6267#6757#0" expanded="false" />
-                <element signature="e#6760#7965#0" expanded="false" />
-                <element signature="e#7968#8718#0" expanded="false" />
+                <element signature="e#2663#2889#0" expanded="false" />
+                <element signature="e#2892#3249#0" expanded="false" />
+                <element signature="e#3252#3658#0" expanded="false" />
+                <element signature="e#3661#4365#0" expanded="false" />
+                <element signature="e#5286#5787#0" expanded="false" />
+                <element signature="e#5790#7183#0" expanded="false" />
+                <element signature="e#7186#7676#0" expanded="false" />
+                <element signature="e#7679#8884#0" expanded="false" />
+                <element signature="e#8887#9647#0" expanded="false" />
+                <element signature="e#9650#10418#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -125,18 +124,22 @@
     <configuration name="Proj1PT_1000x1000x100" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="1000 1000 100 8" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Proj1PT" TARGET_NAME="Proj1PT" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Proj1PT" RUN_TARGET_NAME="Proj1PT">
       <envs />
     </configuration>
+    <configuration name="Proj1PT_1000x1000x10000" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="1000 1000 10000 8" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Proj1PT" TARGET_NAME="Proj1PT" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Proj1PT" RUN_TARGET_NAME="Proj1PT">
+      <envs />
+    </configuration>
     <configuration name="Proj1PT_100x100x10" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="100 100 10 8" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Proj1PT" TARGET_NAME="Proj1PT" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Proj1PT" RUN_TARGET_NAME="Proj1PT">
       <envs />
     </configuration>
     <configuration name="Proj1PT_1x1x1" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="1 1 1 8" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Proj1PT" TARGET_NAME="Proj1PT" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Proj1PT" RUN_TARGET_NAME="Proj1PT">
       <envs />
     </configuration>
-    <list size="5">
+    <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Application.Build All" />
       <item index="1" class="java.lang.String" itemvalue="Application.Proj1PT_100x100x10" />
       <item index="2" class="java.lang.String" itemvalue="Application.Proj1PT_1x1x1" />
       <item index="3" class="java.lang.String" itemvalue="Application.Proj1PT_1000x1000x100" />
-      <item index="4" class="java.lang.String" itemvalue="Application.Proj1PT_10000x10000x1000" />
+      <item index="4" class="java.lang.String" itemvalue="Application.Proj1PT_1000x1000x10000" />
+      <item index="5" class="java.lang.String" itemvalue="Application.Proj1PT_10000x10000x1000" />
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
@@ -158,7 +161,7 @@
       <workItem from="1522072262925" duration="13010000" />
       <workItem from="1522107655984" duration="16000" />
       <workItem from="1522107689406" duration="600000" />
-      <workItem from="1522177379319" duration="69000" />
+      <workItem from="1522177379319" duration="3267000" />
     </task>
     <task id="LOCAL-00001" summary="rowThread">
       <created>1522023997911</created>
@@ -188,11 +191,18 @@
       <option name="project" value="LOCAL" />
       <updated>1522106234755</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="cellParallelizedHamming cant wake master thread after a while">
+      <created>1522177529081</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1522177529081</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24500000" />
+    <option name="totallyTimeSpent" value="27698000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1280" y="74" width="1600" height="878" extended-state="6" />
@@ -200,9 +210,10 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24968314" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889733" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="1739" y="606" width="355" height="248" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39920425" sideWeight="0.50253487" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22179975" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22179975" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891247" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Serial Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -210,7 +221,6 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39920425" sideWeight="0.49746513" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889733" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="1739" y="606" width="355" height="248" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -230,7 +240,8 @@
     <MESSAGE value="Trying to work with semaphores" />
     <MESSAGE value="Working Unverified row" />
     <MESSAGE value="Working Verified parallel by row" />
-    <option name="LAST_COMMIT_MESSAGE" value="Working Verified parallel by row" />
+    <MESSAGE value="cellParallelizedHamming cant wake master thread after a while" />
+    <option name="LAST_COMMIT_MESSAGE" value="cellParallelizedHamming cant wake master thread after a while" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -313,16 +324,16 @@
             <element signature="e#135#199#1" expanded="false" />
             <element signature="e#210#289#1" expanded="false" />
             <element signature="e#662#844#0" expanded="false" />
-            <element signature="e#847#2659#0" expanded="false" />
-            <element signature="e#2662#2888#0" expanded="false" />
-            <element signature="e#2891#3248#0" expanded="false" />
-            <element signature="e#3251#3657#0" expanded="false" />
-            <element signature="e#3660#4364#0" expanded="false" />
-            <element signature="e#4367#4868#0" expanded="false" />
-            <element signature="e#4871#6264#0" expanded="false" />
-            <element signature="e#6267#6757#0" expanded="false" />
-            <element signature="e#6760#7965#0" expanded="false" />
-            <element signature="e#7968#8718#0" expanded="false" />
+            <element signature="e#2663#2889#0" expanded="false" />
+            <element signature="e#2892#3249#0" expanded="false" />
+            <element signature="e#3252#3658#0" expanded="false" />
+            <element signature="e#3661#4365#0" expanded="false" />
+            <element signature="e#5286#5787#0" expanded="false" />
+            <element signature="e#5790#7183#0" expanded="false" />
+            <element signature="e#7186#7676#0" expanded="false" />
+            <element signature="e#7679#8884#0" expanded="false" />
+            <element signature="e#8887#9647#0" expanded="false" />
+            <element signature="e#9650#10418#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -336,16 +347,16 @@
             <element signature="e#135#199#1" expanded="false" />
             <element signature="e#210#289#1" expanded="false" />
             <element signature="e#662#844#0" expanded="false" />
-            <element signature="e#847#2659#0" expanded="false" />
-            <element signature="e#2662#2888#0" expanded="false" />
-            <element signature="e#2891#3248#0" expanded="false" />
-            <element signature="e#3251#3657#0" expanded="false" />
-            <element signature="e#3660#4364#0" expanded="false" />
-            <element signature="e#4367#4868#0" expanded="false" />
-            <element signature="e#4871#6264#0" expanded="false" />
-            <element signature="e#6267#6757#0" expanded="false" />
-            <element signature="e#6760#7965#0" expanded="false" />
-            <element signature="e#7968#8718#0" expanded="false" />
+            <element signature="e#2663#2889#0" expanded="false" />
+            <element signature="e#2892#3249#0" expanded="false" />
+            <element signature="e#3252#3658#0" expanded="false" />
+            <element signature="e#3661#4365#0" expanded="false" />
+            <element signature="e#5286#5787#0" expanded="false" />
+            <element signature="e#5790#7183#0" expanded="false" />
+            <element signature="e#7186#7676#0" expanded="false" />
+            <element signature="e#7679#8884#0" expanded="false" />
+            <element signature="e#8887#9647#0" expanded="false" />
+            <element signature="e#9650#10418#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -359,16 +370,16 @@
             <element signature="e#135#199#1" expanded="false" />
             <element signature="e#210#289#1" expanded="false" />
             <element signature="e#662#844#0" expanded="false" />
-            <element signature="e#847#2659#0" expanded="false" />
-            <element signature="e#2662#2888#0" expanded="false" />
-            <element signature="e#2891#3248#0" expanded="false" />
-            <element signature="e#3251#3657#0" expanded="false" />
-            <element signature="e#3660#4364#0" expanded="false" />
-            <element signature="e#4367#4868#0" expanded="false" />
-            <element signature="e#4871#6264#0" expanded="false" />
-            <element signature="e#6267#6757#0" expanded="false" />
-            <element signature="e#6760#7965#0" expanded="false" />
-            <element signature="e#7968#8718#0" expanded="false" />
+            <element signature="e#2663#2889#0" expanded="false" />
+            <element signature="e#2892#3249#0" expanded="false" />
+            <element signature="e#3252#3658#0" expanded="false" />
+            <element signature="e#3661#4365#0" expanded="false" />
+            <element signature="e#5286#5787#0" expanded="false" />
+            <element signature="e#5790#7183#0" expanded="false" />
+            <element signature="e#7186#7676#0" expanded="false" />
+            <element signature="e#7679#8884#0" expanded="false" />
+            <element signature="e#8887#9647#0" expanded="false" />
+            <element signature="e#9650#10418#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -382,16 +393,16 @@
             <element signature="e#135#199#1" expanded="false" />
             <element signature="e#210#289#1" expanded="false" />
             <element signature="e#662#844#0" expanded="false" />
-            <element signature="e#847#2659#0" expanded="false" />
-            <element signature="e#2662#2888#0" expanded="false" />
-            <element signature="e#2891#3248#0" expanded="false" />
-            <element signature="e#3251#3657#0" expanded="false" />
-            <element signature="e#3660#4364#0" expanded="false" />
-            <element signature="e#4367#4868#0" expanded="false" />
-            <element signature="e#4871#6264#0" expanded="false" />
-            <element signature="e#6267#6757#0" expanded="false" />
-            <element signature="e#6760#7965#0" expanded="false" />
-            <element signature="e#7968#8718#0" expanded="false" />
+            <element signature="e#2663#2889#0" expanded="false" />
+            <element signature="e#2892#3249#0" expanded="false" />
+            <element signature="e#3252#3658#0" expanded="false" />
+            <element signature="e#3661#4365#0" expanded="false" />
+            <element signature="e#5286#5787#0" expanded="false" />
+            <element signature="e#5790#7183#0" expanded="false" />
+            <element signature="e#7186#7676#0" expanded="false" />
+            <element signature="e#7679#8884#0" expanded="false" />
+            <element signature="e#8887#9647#0" expanded="false" />
+            <element signature="e#9650#10418#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -405,16 +416,16 @@
             <element signature="e#135#199#1" expanded="false" />
             <element signature="e#210#289#1" expanded="false" />
             <element signature="e#662#844#0" expanded="false" />
-            <element signature="e#847#2659#0" expanded="false" />
-            <element signature="e#2662#2888#0" expanded="false" />
-            <element signature="e#2891#3248#0" expanded="false" />
-            <element signature="e#3251#3657#0" expanded="false" />
-            <element signature="e#3660#4364#0" expanded="false" />
-            <element signature="e#4367#4868#0" expanded="false" />
-            <element signature="e#4871#6264#0" expanded="false" />
-            <element signature="e#6267#6757#0" expanded="false" />
-            <element signature="e#6760#7965#0" expanded="false" />
-            <element signature="e#7968#8718#0" expanded="false" />
+            <element signature="e#2663#2889#0" expanded="false" />
+            <element signature="e#2892#3249#0" expanded="false" />
+            <element signature="e#3252#3658#0" expanded="false" />
+            <element signature="e#3661#4365#0" expanded="false" />
+            <element signature="e#5286#5787#0" expanded="false" />
+            <element signature="e#5790#7183#0" expanded="false" />
+            <element signature="e#7186#7676#0" expanded="false" />
+            <element signature="e#7679#8884#0" expanded="false" />
+            <element signature="e#8887#9647#0" expanded="false" />
+            <element signature="e#9650#10418#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -428,39 +439,39 @@
             <element signature="e#135#199#1" expanded="false" />
             <element signature="e#210#289#1" expanded="false" />
             <element signature="e#662#844#0" expanded="false" />
-            <element signature="e#847#2659#0" expanded="false" />
-            <element signature="e#2662#2888#0" expanded="false" />
-            <element signature="e#2891#3248#0" expanded="false" />
-            <element signature="e#3251#3657#0" expanded="false" />
-            <element signature="e#3660#4364#0" expanded="false" />
-            <element signature="e#4367#4868#0" expanded="false" />
-            <element signature="e#4871#6264#0" expanded="false" />
-            <element signature="e#6267#6757#0" expanded="false" />
-            <element signature="e#6760#7965#0" expanded="false" />
-            <element signature="e#7968#8718#0" expanded="false" />
+            <element signature="e#2663#2889#0" expanded="false" />
+            <element signature="e#2892#3249#0" expanded="false" />
+            <element signature="e#3252#3658#0" expanded="false" />
+            <element signature="e#3661#4365#0" expanded="false" />
+            <element signature="e#5286#5787#0" expanded="false" />
+            <element signature="e#5790#7183#0" expanded="false" />
+            <element signature="e#7186#7676#0" expanded="false" />
+            <element signature="e#7679#8884#0" expanded="false" />
+            <element signature="e#8887#9647#0" expanded="false" />
+            <element signature="e#9650#10418#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="299" column="32" lean-forward="true" selection-start-line="299" selection-start-column="32" selection-end-line="299" selection-end-column="32" />
+        <state relative-caret-position="198">
+          <caret line="48" column="38" lean-forward="true" selection-start-line="48" selection-start-column="38" selection-end-line="48" selection-end-column="38" />
           <folding>
             <element signature="e#75#125#1" expanded="false" />
             <element signature="e#135#199#1" expanded="false" />
             <element signature="e#210#289#1" expanded="false" />
             <element signature="e#662#844#0" expanded="false" />
-            <element signature="e#847#2659#0" expanded="false" />
-            <element signature="e#2662#2888#0" expanded="false" />
-            <element signature="e#2891#3248#0" expanded="false" />
-            <element signature="e#3251#3657#0" expanded="false" />
-            <element signature="e#3660#4364#0" expanded="false" />
-            <element signature="e#4367#4868#0" expanded="false" />
-            <element signature="e#4871#6264#0" expanded="false" />
-            <element signature="e#6267#6757#0" expanded="false" />
-            <element signature="e#6760#7965#0" expanded="false" />
-            <element signature="e#7968#8718#0" expanded="false" />
+            <element signature="e#2663#2889#0" expanded="false" />
+            <element signature="e#2892#3249#0" expanded="false" />
+            <element signature="e#3252#3658#0" expanded="false" />
+            <element signature="e#3661#4365#0" expanded="false" />
+            <element signature="e#5286#5787#0" expanded="false" />
+            <element signature="e#5790#7183#0" expanded="false" />
+            <element signature="e#7186#7676#0" expanded="false" />
+            <element signature="e#7679#8884#0" expanded="false" />
+            <element signature="e#8887#9647#0" expanded="false" />
+            <element signature="e#9650#10418#0" expanded="false" />
           </folding>
         </state>
       </provider>

@@ -84,7 +84,7 @@ void initTables() {
     }
 
     //Get random seed based on current time for the rand function
-    srand((unsigned int)time(NULL));
+    srand((unsigned int) time(NULL));
 //  init A set
     for (int i = 0; i < m; i++) {
         for (int j = 0; j < l; j++) {
@@ -160,6 +160,38 @@ void rowParallelizedHamming() {
         pthread_create(&rowT[i], NULL, rowThread, (void *) &rowTD[i]);
     }
     for (int i = 0; i < m; i++) {
+        pthread_join(rowT[i], NULL);
+    }
+    clock_gettime(CLOCK_REALTIME, &end);
+    printf("%d ms\n", timeDifference(&start, &end));
+}
+
+u_int64_t taskCount, taskIndex;
+
+void *rowThreadTaskSharing(void *threadarg) {
+    int row;
+    pthread_mutex_lock(&counterMutex);
+    while (taskIndex < taskCount) {
+        row = taskIndex++;
+        pthread_mutex_unlock(&counterMutex);
+        for (int i = 0; i < n; i++) {
+            distR[row][i] = hamming(a[row], b[i]);
+        }
+        pthread_mutex_lock(&counterMutex);
+    }
+    pthread_mutex_unlock(&counterMutex);
+}
+
+void rowParallelizedHammingTaskSharing() {
+    printf("- Parallel by Row Execution: ");
+    fflush(stdout);
+    threadCounter = 0;
+    clock_gettime(CLOCK_REALTIME, &start);
+    taskCount = (u_int64_t) n;
+    for (int i = 0; i < t; i++) {
+        pthread_create(&rowT[i], NULL, rowThreadTaskSharing, NULL);
+    }
+    for (int i = 0; i < t; i++) {
         pthread_join(rowT[i], NULL);
     }
     clock_gettime(CLOCK_REALTIME, &end);
@@ -282,11 +314,11 @@ void checkHammingResults() {
                 fflush(stderr);
                 exit(EXIT_FAILURE);
             }
-            if (distSerial[i][j] != distC[i][j]) {
-                fprintf(stderr, "Cell Parallelization Data Mismatch\n");
-                fflush(stderr);
-                exit(EXIT_FAILURE);
-            }
+//            if (distSerial[i][j] != distC[i][j]) {
+//                fprintf(stderr, "Cell Parallelization Data Mismatch\n");
+//                fflush(stderr);
+//                exit(EXIT_FAILURE);
+//            }
 //            if (distSerial[i][j] != distCH[i][j]){
 //                fprintf(stderr, "Character Parallelization Data Mismatch\n");
 //                fflush(stderr);
@@ -322,10 +354,14 @@ int main(int argc, char **argv) {
     printf("Calculation\n");
 
     // Calculations
-//    serialHamming();
+    serialHamming();
 //    rowParallelizedHamming();
-    cellParallelizedHamming();
+//    cellParallelizedHamming();
 //    charParallelizedHamming();
+
+
+    rowParallelizedHammingTaskSharing();
+
 
     checkHammingResults();
     printf("\n");
