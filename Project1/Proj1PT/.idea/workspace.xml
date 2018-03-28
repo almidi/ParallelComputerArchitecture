@@ -11,11 +11,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="218476c1-aa8d-4d01-91d6-5e5710594c87" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../Proj1/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Proj1/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../Proj1OMP/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Proj1OMP/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="218476c1-aa8d-4d01-91d6-5e5710594c87" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -30,8 +26,8 @@
       <file leaf-file-name="main.c" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="632">
-              <caret line="237" column="0" lean-forward="false" selection-start-line="237" selection-start-column="0" selection-end-line="237" selection-end-column="0" />
+            <state relative-caret-position="436">
+              <caret line="223" column="32" lean-forward="true" selection-start-line="223" selection-start-column="32" selection-end-line="223" selection-end-column="32" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
                 <element signature="e#62#141#1" expanded="false" />
@@ -180,7 +176,7 @@
       <workItem from="1522177379319" duration="8870000" />
       <workItem from="1522189439740" duration="4931000" />
       <workItem from="1522232845473" duration="2968000" />
-      <workItem from="1522241444320" duration="2722000" />
+      <workItem from="1522241444320" duration="2723000" />
     </task>
     <task id="LOCAL-00001" summary="rowThread">
       <created>1522023997911</created>
@@ -249,7 +245,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43922000" />
+    <option name="totallyTimeSpent" value="43923000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="799" height="878" extended-state="4" />
@@ -528,8 +524,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="632">
-          <caret line="237" column="0" lean-forward="false" selection-start-line="237" selection-start-column="0" selection-end-line="237" selection-end-column="0" />
+        <state relative-caret-position="436">
+          <caret line="223" column="32" lean-forward="true" selection-start-line="223" selection-start-column="32" selection-end-line="223" selection-end-column="32" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
             <element signature="e#62#141#1" expanded="false" />

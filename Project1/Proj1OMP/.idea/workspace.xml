@@ -11,11 +11,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2dc03cbc-7226-406c-b592-833fea80f87a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../Proj1/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Proj1/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../Proj1PT/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Proj1PT/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="2dc03cbc-7226-406c-b592-833fea80f87a" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -166,7 +162,7 @@
       <workItem from="1521981644189" duration="2963000" />
       <workItem from="1521988513148" duration="18077000" />
       <workItem from="1522234945047" duration="1013000" />
-      <workItem from="1522241444320" duration="2679000" />
+      <workItem from="1522241444320" duration="2719000" />
     </task>
     <task id="LOCAL-00001" summary="Implemented Run Script">
       <created>1522244004246</created>
@@ -179,7 +175,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56949000" />
+    <option name="totallyTimeSpent" value="56989000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
