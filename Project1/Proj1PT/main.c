@@ -9,7 +9,8 @@ struct charThreadData {
     int col;
     int index;
 } *charTD;
-int **a, **b, m, n, l, t;
+__uint8_t **a, **b;
+int m, n, l, t;
 int **distSerial, **distR, **distC, **distCH;    // Tables
 
 //Threads
@@ -26,8 +27,9 @@ int timeDifference(struct timespec *start, struct timespec *stop) {
 
 
 void initTables() {
-    printf("Initializing\n");
-    distSerial = malloc(m * sizeof(int *));
+    printf("- Initializing");
+    fflush(stdout);
+//    distSerial = malloc(m * sizeof(int *));
     distC = malloc(m * sizeof(int *));
     distR = malloc(m * sizeof(int *));
     distCH = malloc(m * sizeof(int *));
@@ -35,13 +37,14 @@ void initTables() {
     cellMutex = malloc(m * sizeof(pthread_mutex_t *));
 
     for (int i = 0; i < m; i++) {
-        distSerial[i] = malloc(n * sizeof(int));
+//        distSerial[i] = malloc(n * sizeof(int));
         distR[i] = malloc(n * sizeof(int));
         distC[i] = malloc(n * sizeof(int));
         distCH[i] = malloc(n * sizeof(int));
         cellMutex[i] = malloc(n * sizeof(pthread_mutex_t));
     }
-
+    printf(".");
+    fflush(stdout);
     for (int i = 0; i < m; i++) {
         for (int j = 0; j < n; j++) {
             distR[i][j] = 0;
@@ -50,37 +53,39 @@ void initTables() {
             pthread_mutex_init(&cellMutex[i][j], NULL);
         }
     }
-
+    printf(".");
+    fflush(stdout);
     a = malloc(m * sizeof(int *));
     for (int i = 0; i < m; i++) {
-        a[i] = malloc(l * sizeof(int));
+        a[i] = malloc(l * sizeof(__uint8_t));
     }
 
     b = malloc(n * sizeof(int *));
     for (int i = 0; i < n; i++) {
-        b[i] = malloc(l * sizeof(int));
+        b[i] = malloc(l * sizeof(__uint8_t));
     }
-
+    printf(".\n");
+    fflush(stdout);
     //Get random seed based on current time for the rand function
     srand((unsigned int) time(NULL));
 //  init A set
     for (int i = 0; i < m; i++) {
         for (int j = 0; j < l; j++) {
-            a[i][j] = rand() % 2; // random number between 0 and 1
+            a[i][j] = (__uint8_t) rand() % 2; // random number between 0 and 1
         }
     }
 
 //  init B set
     for (int i = 0; i < n; i++) {
         for (int j = 0; j < l; j++) {
-            b[i][j] = rand() % 2; // random number between 0 and 1
+            b[i][j] = (__uint8_t) rand() % 2; // random number between 0 and 1
         }
     }
 }
 
 
 //Hamming Distance Calculator between two arrays of l size
-int hamming(const int *a, const int *b) {
+int hamming(const u_int8_t *a, const __uint8_t *b) {
     int k = 0;
     for (int i = 0; i < l; i++) {
         if (a[i] != b[i]) {
@@ -211,22 +216,24 @@ int main(int argc, char **argv) {
     l = atoi(argv[3]);
     t = atoi(argv[4]);
 
-    printf("\nArguments\n");
-    printf("-------------------\n");
-    printf("     m: %d\n", m);
-    printf("     n: %d\n", n);
-    printf("     l: %d\n", l);
-    printf("     t: %d\n", t);
+//    printf("\nArguments\n");
+//    printf("-------------------\n");
+//    printf("     m: %d\n", m);
+//    printf("     n: %d\n", n);
+//    printf("     l: %d\n", l);
+//    printf("     t: %d\n", t);
 
+    printf("**************************\n");
+    printf("******** PThreads ********\n");
+    printf("**************************\n");
     initTables();
 
-    printf("Calculation\n");
-    serialHamming();
+//    printf("Calculation\n");
+//    serialHamming();
     threadSpawner("- Parallel by Row Execution: ", rowThread, (u_int64_t) n);
     threadSpawner("- Parallel by Cell Execution: ", cellThread, (u_int64_t) n * m);
     threadSpawner("- Parallel by Char Execution: ", charThread, (u_int64_t) n * m * l);
-
-    checkHammingResults();
     printf("\n");
+//    checkHammingResults();
     return 0;
 }

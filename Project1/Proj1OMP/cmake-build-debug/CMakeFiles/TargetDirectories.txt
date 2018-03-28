@@ -1,3 +1,3 @@
-/hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project1/Proj1OMP/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project1/Proj1OMP/cmake-build-debug/CMakeFiles/edit_cache.dir
-/hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project1/Proj1OMP/cmake-build-debug/CMakeFiles/Proj1OMP.dir
+/home/tzanis/Workspace/Clion/ParallelComputerArchitecture/Project1/Proj1OMP/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/tzanis/Workspace/Clion/ParallelComputerArchitecture/Project1/Proj1OMP/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/tzanis/Workspace/Clion/ParallelComputerArchitecture/Project1/Proj1OMP/cmake-build-debug/CMakeFiles/Proj1OMP.dir
