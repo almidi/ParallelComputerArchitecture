@@ -13,53 +13,8 @@
   <component name="ChangeListManager">
     <list default="true" id="218476c1-aa8d-4d01-91d6-5e5710594c87" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/../Proj1/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Proj1/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../Proj1/CMakeLists.txt" afterPath="$PROJECT_DIR$/../Proj1/CMakeLists.txt" />
-      <change beforePath="$PROJECT_DIR$/../Proj1/cmake-build-debug/CMakeCache.txt" afterPath="$PROJECT_DIR$/../Proj1/cmake-build-debug/CMakeCache.txt" />
-      <change beforePath="$PROJECT_DIR$/../Proj1/cmake-build-debug/CMakeFiles/3.9.6/CMakeCCompiler.cmake" afterPath="$PROJECT_DIR$/../Proj1/cmake-build-debug/CMakeFiles/3.9.6/CMakeCCompiler.cmake" />
-      <change beforePath="$PROJECT_DIR$/../Proj1/cmake-build-debug/CMakeFiles/3.9.6/CMakeDetermineCompilerABI_C.bin" afterPath="$PROJECT_DIR$/../Proj1/cmake-build-debug/CMakeFiles/3.9.6/CMakeDetermineCompilerABI_C.bin" />
-      <change beforePath="$PROJECT_DIR$/../Proj1/cmake-build-debug/CMakeFiles/3.9.6/CMakeSystem.cmake" afterPath="$PROJECT_DIR$/../Proj1/cmake-build-debug/CMakeFiles/3.9.6/CMakeSystem.cmake" />
-      <change beforePath="$PROJECT_DIR$/../Proj1/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterPath="$PROJECT_DIR$/../Proj1/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" />
-      <change beforePath="$PROJECT_DIR$/../Proj1/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterPath="$PROJECT_DIR$/../Proj1/cmake-build-debug/CMakeFiles/CMakeOutput.log" />
-      <change beforePath="$PROJECT_DIR$/../Proj1/cmake-build-debug/CMakeFiles/Makefile.cmake" afterPath="$PROJECT_DIR$/../Proj1/cmake-build-debug/CMakeFiles/Makefile.cmake" />
-      <change beforePath="$PROJECT_DIR$/../Proj1/cmake-build-debug/CMakeFiles/Makefile2" afterPath="$PROJECT_DIR$/../Proj1/cmake-build-debug/CMakeFiles/Makefile2" />
-      <change beforePath="$PROJECT_DIR$/../Proj1/cmake-build-debug/CMakeFiles/Proj1.dir/C.includecache" afterPath="$PROJECT_DIR$/../Proj1/cmake-build-debug/CMakeFiles/Proj1.dir/C.includecache" />
-      <change beforePath="$PROJECT_DIR$/../Proj1/cmake-build-debug/CMakeFiles/Proj1.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/../Proj1/cmake-build-debug/CMakeFiles/Proj1.dir/DependInfo.cmake" />
-      <change beforePath="$PROJECT_DIR$/../Proj1/cmake-build-debug/CMakeFiles/Proj1.dir/build.make" afterPath="$PROJECT_DIR$/../Proj1/cmake-build-debug/CMakeFiles/Proj1.dir/build.make" />
-      <change beforePath="$PROJECT_DIR$/../Proj1/cmake-build-debug/CMakeFiles/Proj1.dir/depend.internal" afterPath="$PROJECT_DIR$/../Proj1/cmake-build-debug/CMakeFiles/Proj1.dir/depend.internal" />
-      <change beforePath="$PROJECT_DIR$/../Proj1/cmake-build-debug/CMakeFiles/Proj1.dir/flags.make" afterPath="$PROJECT_DIR$/../Proj1/cmake-build-debug/CMakeFiles/Proj1.dir/flags.make" />
-      <change beforePath="$PROJECT_DIR$/../Proj1/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterPath="$PROJECT_DIR$/../Proj1/cmake-build-debug/CMakeFiles/TargetDirectories.txt" />
-      <change beforePath="$PROJECT_DIR$/../Proj1/cmake-build-debug/CMakeFiles/clion-log.txt" afterPath="$PROJECT_DIR$/../Proj1/cmake-build-debug/CMakeFiles/clion-log.txt" />
-      <change beforePath="$PROJECT_DIR$/../Proj1/cmake-build-debug/CMakeFiles/feature_tests.bin" afterPath="$PROJECT_DIR$/../Proj1/cmake-build-debug/CMakeFiles/feature_tests.bin" />
-      <change beforePath="$PROJECT_DIR$/../Proj1/cmake-build-debug/Makefile" afterPath="$PROJECT_DIR$/../Proj1/cmake-build-debug/Makefile" />
-      <change beforePath="$PROJECT_DIR$/../Proj1/cmake-build-debug/Proj1" afterPath="$PROJECT_DIR$/../Proj1/cmake-build-debug/Proj1" />
-      <change beforePath="$PROJECT_DIR$/../Proj1/cmake-build-debug/Proj1.cbp" afterPath="$PROJECT_DIR$/../Proj1/cmake-build-debug/Proj1.cbp" />
-      <change beforePath="$PROJECT_DIR$/../Proj1/cmake-build-debug/cmake_install.cmake" afterPath="$PROJECT_DIR$/../Proj1/cmake-build-debug/cmake_install.cmake" />
-      <change beforePath="$PROJECT_DIR$/../Proj1/main.c" afterPath="$PROJECT_DIR$/../Proj1/main.c" />
       <change beforePath="$PROJECT_DIR$/../Proj1OMP/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Proj1OMP/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../Proj1OMP/cmake-build-debug/CMakeCache.txt" afterPath="$PROJECT_DIR$/../Proj1OMP/cmake-build-debug/CMakeCache.txt" />
-      <change beforePath="$PROJECT_DIR$/../Proj1OMP/cmake-build-debug/CMakeFiles/3.9.6/CMakeCCompiler.cmake" afterPath="$PROJECT_DIR$/../Proj1OMP/cmake-build-debug/CMakeFiles/3.9.6/CMakeCCompiler.cmake" />
-      <change beforePath="$PROJECT_DIR$/../Proj1OMP/cmake-build-debug/CMakeFiles/3.9.6/CMakeDetermineCompilerABI_C.bin" afterPath="$PROJECT_DIR$/../Proj1OMP/cmake-build-debug/CMakeFiles/3.9.6/CMakeDetermineCompilerABI_C.bin" />
-      <change beforePath="$PROJECT_DIR$/../Proj1OMP/cmake-build-debug/CMakeFiles/3.9.6/CMakeSystem.cmake" afterPath="$PROJECT_DIR$/../Proj1OMP/cmake-build-debug/CMakeFiles/3.9.6/CMakeSystem.cmake" />
-      <change beforePath="$PROJECT_DIR$/../Proj1OMP/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterPath="$PROJECT_DIR$/../Proj1OMP/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" />
-      <change beforePath="$PROJECT_DIR$/../Proj1OMP/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterPath="$PROJECT_DIR$/../Proj1OMP/cmake-build-debug/CMakeFiles/CMakeOutput.log" />
-      <change beforePath="$PROJECT_DIR$/../Proj1OMP/cmake-build-debug/CMakeFiles/FindOpenMP/ompver_C.bin" afterPath="$PROJECT_DIR$/../Proj1OMP/cmake-build-debug/CMakeFiles/FindOpenMP/ompver_C.bin" />
-      <change beforePath="$PROJECT_DIR$/../Proj1OMP/cmake-build-debug/CMakeFiles/Makefile.cmake" afterPath="$PROJECT_DIR$/../Proj1OMP/cmake-build-debug/CMakeFiles/Makefile.cmake" />
-      <change beforePath="$PROJECT_DIR$/../Proj1OMP/cmake-build-debug/CMakeFiles/Makefile2" afterPath="$PROJECT_DIR$/../Proj1OMP/cmake-build-debug/CMakeFiles/Makefile2" />
-      <change beforePath="$PROJECT_DIR$/../Proj1OMP/cmake-build-debug/CMakeFiles/Proj1OMP.dir/C.includecache" afterPath="$PROJECT_DIR$/../Proj1OMP/cmake-build-debug/CMakeFiles/Proj1OMP.dir/C.includecache" />
-      <change beforePath="$PROJECT_DIR$/../Proj1OMP/cmake-build-debug/CMakeFiles/Proj1OMP.dir/DependInfo.cmake" afterPath="$PROJECT_DIR$/../Proj1OMP/cmake-build-debug/CMakeFiles/Proj1OMP.dir/DependInfo.cmake" />
-      <change beforePath="$PROJECT_DIR$/../Proj1OMP/cmake-build-debug/CMakeFiles/Proj1OMP.dir/build.make" afterPath="$PROJECT_DIR$/../Proj1OMP/cmake-build-debug/CMakeFiles/Proj1OMP.dir/build.make" />
-      <change beforePath="$PROJECT_DIR$/../Proj1OMP/cmake-build-debug/CMakeFiles/Proj1OMP.dir/depend.internal" afterPath="$PROJECT_DIR$/../Proj1OMP/cmake-build-debug/CMakeFiles/Proj1OMP.dir/depend.internal" />
-      <change beforePath="$PROJECT_DIR$/../Proj1OMP/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterPath="$PROJECT_DIR$/../Proj1OMP/cmake-build-debug/CMakeFiles/TargetDirectories.txt" />
-      <change beforePath="$PROJECT_DIR$/../Proj1OMP/cmake-build-debug/CMakeFiles/clion-log.txt" afterPath="$PROJECT_DIR$/../Proj1OMP/cmake-build-debug/CMakeFiles/clion-log.txt" />
-      <change beforePath="$PROJECT_DIR$/../Proj1OMP/cmake-build-debug/CMakeFiles/feature_tests.bin" afterPath="$PROJECT_DIR$/../Proj1OMP/cmake-build-debug/CMakeFiles/feature_tests.bin" />
-      <change beforePath="$PROJECT_DIR$/../Proj1OMP/cmake-build-debug/Makefile" afterPath="$PROJECT_DIR$/../Proj1OMP/cmake-build-debug/Makefile" />
-      <change beforePath="$PROJECT_DIR$/../Proj1OMP/cmake-build-debug/Proj1OMP" afterPath="$PROJECT_DIR$/../Proj1OMP/cmake-build-debug/Proj1OMP" />
-      <change beforePath="$PROJECT_DIR$/../Proj1OMP/cmake-build-debug/Proj1OMP.cbp" afterPath="$PROJECT_DIR$/../Proj1OMP/cmake-build-debug/Proj1OMP.cbp" />
-      <change beforePath="$PROJECT_DIR$/../Proj1OMP/cmake-build-debug/cmake_install.cmake" afterPath="$PROJECT_DIR$/../Proj1OMP/cmake-build-debug/cmake_install.cmake" />
-      <change beforePath="$PROJECT_DIR$/../Proj1OMP/main.c" afterPath="$PROJECT_DIR$/../Proj1OMP/main.c" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Proj1PT" afterPath="$PROJECT_DIR$/cmake-build-debug/Proj1PT" />
-      <change beforePath="$PROJECT_DIR$/main.c" afterPath="$PROJECT_DIR$/main.c" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -225,7 +180,7 @@
       <workItem from="1522177379319" duration="8870000" />
       <workItem from="1522189439740" duration="4931000" />
       <workItem from="1522232845473" duration="2968000" />
-      <workItem from="1522241444320" duration="2179000" />
+      <workItem from="1522241444320" duration="2722000" />
     </task>
     <task id="LOCAL-00001" summary="rowThread">
       <created>1522023997911</created>
@@ -294,10 +249,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43379000" />
+    <option name="totallyTimeSpent" value="43922000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="799" height="878" extended-state="4" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24968314" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
