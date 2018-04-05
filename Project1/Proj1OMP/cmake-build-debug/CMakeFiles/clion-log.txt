@@ -1,4 +1,4 @@
-/home/tzanis/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/173.4674.29/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/tzanis/Workspace/Clion/ParallelComputerArchitecture/Project1/Proj1OMP
+/home/tzanis/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.4203.549/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/tzanis/Workspace/Clion/ParallelComputerArchitecture/Project1/Proj1OMP
 -- The C compiler identification is GNU 7.3.1
 -- Check for working C compiler: /usr/bin/cc
 -- Check for working C compiler: /usr/bin/cc -- works
@@ -6,7 +6,8 @@
 -- Detecting C compiler ABI info - done
 -- Detecting C compile features
 -- Detecting C compile features - done
--- Found OpenMP_C: -fopenmp (found version "4.5") 
+-- Found OpenMP_C: -fopenmp  
+-- Found OpenMP: TRUE   
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /home/tzanis/Workspace/Clion/ParallelComputerArchitecture/Project1/Proj1OMP/cmake-build-debug
