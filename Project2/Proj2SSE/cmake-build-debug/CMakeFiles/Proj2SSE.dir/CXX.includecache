@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/almidi/TUC/PCA/ParallelComputerArchitecture/Project2/Proj2SSE/main.cpp
+stdio.h
+-
+stdlib.h
+-
+time.h
+-
+sys/time.h
+-
+assert.h
+-
+xmmintrin.h
+-
+

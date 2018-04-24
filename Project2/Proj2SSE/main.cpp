@@ -3,6 +3,8 @@
 #include <time.h>
 #include <sys/time.h>
 #include <assert.h>
+#include <xmmintrin.h>
+
 
 double gettime(void) {
     struct timeval ttime;
@@ -28,18 +30,28 @@ int main(int argc, char **argv) {
     int N = atoi(argv[1]);
     int iters = 1000;
     srand(1);
-    float *mVec = (float *) malloc(sizeof(float) * N);
+
+    // works serialized with mm_malloc
+    float *mVec = (float*)_mm_malloc(sizeof(float)*N, 16);
+    __m128i * mVec_ptr = (__m128i*) mVec;
     assert(mVec != NULL);
-    float *nVec = (float *) malloc(sizeof(float) * N);
+    float *nVec = (float*)_mm_malloc(sizeof(float)*N, 16);
+    __m128i * nVec_ptr = (__m128i*) nVec;
     assert(nVec != NULL);
-    float *LVec = (float *) malloc(sizeof(float) * N);
+    float *LVec = (float*)_mm_malloc(sizeof(float)*N, 16);
+    __m128i * LVec_ptr = (__m128i*) LVec;
     assert(LVec != NULL);
-    float *RVec = (float *) malloc(sizeof(float) * N);
+    float *RVec = (float*)_mm_malloc(sizeof(float)*N, 16);
+    __m128i * RVec_ptr = (__m128i*) RVec;
     assert(RVec != NULL);
-    float *CVec = (float *) malloc(sizeof(float) * N);
+    float *CVec = (float*)_mm_malloc(sizeof(float)*N, 16);
+    __m128i * CVec_ptr = (__m128i*) CVec;
     assert(CVec != NULL);
-    float *FVec = (float *) malloc(sizeof(float) * N);
+    float *FVec = (float*)_mm_malloc(sizeof(float)*N, 16);
+    __m128i * FVec_ptr = (__m128i*) FVec;
     assert(FVec != NULL);
+
+
     for (int i = 0; i < N; i++) {
         mVec[i] = (float) (2 + rand() % 10);
         nVec[i] = (float) (2 + rand() % 10);
@@ -66,6 +78,9 @@ int main(int argc, char **argv) {
     double timeTotal = 0.0f;
     for (int j = 0; j < iters; j++) {
         double time0 = gettime();
+
+
+        //To be SIMDed
         for (int i = 0; i < N; i++) {
             float num_0 = LVec[i] + RVec[i];
             float num_1 = mVec[i] * (mVec[i] - 1.0) / 2.0;
@@ -77,14 +92,15 @@ int main(int argc, char **argv) {
             FVec[i] = num / (den + 0.01);
             maxF = FVec[i] > maxF ? FVec[i] : maxF;
         }
+
         double time1 = gettime();
         timeTotal += time1 - time0;
     }
     printf("Time %f Max %f\n", timeTotal / iters, maxF);
-    free(mVec);
-    free(nVec);
-    free(LVec);
-    free(RVec);
-    free(CVec);
-    free(FVec);
+    _mm_free(mVec);
+    _mm_free(nVec);
+    _mm_free(LVec);
+    _mm_free(RVec);
+    _mm_free(CVec);
+    _mm_free(FVec);
 }
