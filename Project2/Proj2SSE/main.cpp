@@ -87,7 +87,7 @@ int main(int argc, char **argv) {
     __m128 * vec_den_1 = (__m128*)_mm_malloc(sizeof(float)*4, 16);
 
     float *onesVec = (float*)_mm_malloc(sizeof(float)*N, 16);
-    __m128 * onesVec_ptr = (__m128*) CVec;
+    __m128 * onesVec_ptr =  (__m128*) CVec;
     assert(onesVec != NULL);
     float *twosVec = (float*)_mm_malloc(sizeof(float)*N, 16);
     __m128 * twosVec_ptr = (__m128*) FVec;
@@ -96,10 +96,12 @@ int main(int argc, char **argv) {
     __m128 * pponesVec_ptr = (__m128*) FVec;
     assert(pponesVec != NULL);
 
-    for (int i = 0 ; i < 4 ; i++){
-        onesVec[i] = 1.0;
-        pponesVec[i] = 0.01;
-        twosVec[i] = 2.0;
+    *onesVec_ptr = _mm_set1_ps(1.f);
+    *pponesVec_ptr = _mm_set_ps(0.01,0.01,0.01,0.01);
+    *onesVec_ptr = _mm_set1_ps(2.f);
+
+    for (int i = 0 ; i < 4 ;i ++){
+        printf("%f\n", onesVec[i]);
     }
 
     for (int j = 0; j < iters; j++) {
@@ -140,7 +142,6 @@ int main(int argc, char **argv) {
             *vec_den_0 = _mm_sub_ps(CVec_ptr[i], LVec_ptr[i]);
             *vec_den_0 = _mm_sub_ps(*vec_den_0, RVec_ptr[i]);
 
-
             //float den_1 = mVec[i] * nVec[i];
             *vec_den_1 = _mm_mul_ps(mVec_ptr[i] ,nVec_ptr[i]);
 
@@ -155,6 +156,7 @@ int main(int argc, char **argv) {
         for (int i = 0; i < N; i++) {
             maxF = FVec[i] > maxF ? FVec[i] : maxF;
         }
+
 
 
         double time1 = gettime();
