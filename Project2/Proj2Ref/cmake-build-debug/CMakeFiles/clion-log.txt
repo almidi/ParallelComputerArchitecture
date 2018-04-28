@@ -1,4 +1,4 @@
-/home/tzanis/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.4203.549/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/tzanis/Workspace/Clion/ParallelComputerArchitecture/Project2/Proj2Ref
+/home/almidi/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.4445.84/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/almidi/TUC/PCA/ParallelComputerArchitecture/Project2/Proj2Ref
 -- The C compiler identification is GNU 7.3.1
 -- The CXX compiler identification is GNU 7.3.1
 -- Check for working C compiler: /usr/bin/cc
@@ -15,4 +15,4 @@
 -- Detecting CXX compile features - done
 -- Configuring done
 -- Generating done
--- Build files have been written to: /home/tzanis/Workspace/Clion/ParallelComputerArchitecture/Project2/Proj2Ref/cmake-build-debug
+-- Build files have been written to: /home/almidi/TUC/PCA/ParallelComputerArchitecture/Project2/Proj2Ref/cmake-build-debug
