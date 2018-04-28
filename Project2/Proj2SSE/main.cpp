@@ -20,11 +20,6 @@ float randpval() {
 }
 
 int main(int argc, char **argv) {
-    union vec{
-        __m128 v;
-        float f[4];
-    };
-
     //  Check arguments
     if (argc != 2) {
         printf("Invalid Arguments\n");
@@ -37,118 +32,127 @@ int main(int argc, char **argv) {
     float maxF = 0.0f;
     srand(1);
 
-    union vec* mVec = (vec*)_mm_malloc(sizeof(vec)*((N/4) + 1), 16);
+    float* mVec = (float*)_mm_malloc(sizeof(float)*N, 16);
+    __m128 * mVec__m128 = (__m128*) mVec;
     assert(mVec != NULL);
-    union vec* nVec = (vec*)_mm_malloc(sizeof(vec)*((N/4) + 1), 16);
+    float* nVec = (float*)_mm_malloc(sizeof(float)*N, 16);
+    __m128 * nVec__m128 = (__m128*) nVec;
     assert(nVec != NULL);
-    union vec* LVec = (vec*)_mm_malloc(sizeof(vec)*((N/4) + 1), 16);
+    float* LVec = (float*)_mm_malloc(sizeof(float)*N, 16);
+    __m128 * LVec__m128 = (__m128*) LVec;
     assert(LVec != NULL);
-    union vec* RVec = (vec*)_mm_malloc(sizeof(vec)*((N/4) + 1), 16);
+    float* RVec = (float*)_mm_malloc(sizeof(float)*N, 16);
+    __m128 * RVec__m128 = (__m128*) RVec;
     assert(RVec != NULL);
-    union vec* CVec = (vec*)_mm_malloc(sizeof(vec)*((N/4) + 1), 16);
+    float* CVec = (float*)_mm_malloc(sizeof(float)*N, 16);
+    __m128 * CVec__m128 = (__m128*) CVec;
     assert(CVec != NULL);
-    union vec* FVec = (vec*)_mm_malloc(sizeof(vec)*((N/4) + 1), 16);
+    float* FVec = (float*)_mm_malloc(sizeof(float)*N, 16);
+    __m128 * FVec__m128 = (__m128*) FVec;
     assert(FVec != NULL);
-    union vec* maxv = (vec*)_mm_malloc(sizeof(vec), 16);
+    float* maxv = (float*)_mm_malloc(sizeof(float), 16);
+    __m128 * maxv__m128 = (__m128*) maxv;
     assert(maxv != NULL);
 
-    __m128 * vec_num = (__m128*)_mm_malloc(sizeof(float)*4, 16);
-    __m128 * vec_num_0 = (__m128*)_mm_malloc(sizeof(float)*4, 16);
-    __m128 * vec_num_1 = (__m128*)_mm_malloc(sizeof(float)*4, 16);
-    __m128 * vec_num_2 = (__m128*)_mm_malloc(sizeof(float)*4, 16);
-    __m128 * vec_den = (__m128*)_mm_malloc(sizeof(float)*4, 16);
-    __m128 * vec_den_0 = (__m128*)_mm_malloc(sizeof(float)*4, 16);
-    __m128 * vec_den_1 = (__m128*)_mm_malloc(sizeof(float)*4, 16);
 
-    __m128 * onev = (__m128*)_mm_malloc(sizeof(float)*4, 16);
-    __m128 * pponev = (__m128*)_mm_malloc(sizeof(float)*4, 16);
-    __m128 * twov = (__m128*)_mm_malloc(sizeof(float)*4, 16);
+    __m128 * vec_num = (__m128*)_mm_malloc(sizeof(__m128), 16);
+    __m128 * vec_num_0 = (__m128*)_mm_malloc(sizeof(__m128), 16);
+    __m128 * vec_num_1 = (__m128*)_mm_malloc(sizeof(__m128), 16);
+    __m128 * vec_num_2 = (__m128*)_mm_malloc(sizeof(__m128), 16);
+    __m128 * vec_den = (__m128*)_mm_malloc(sizeof(__m128), 16);
+    __m128 * vec_den_0 = (__m128*)_mm_malloc(sizeof(__m128), 16);
+    __m128 * vec_den_1 = (__m128*)_mm_malloc(sizeof(__m128), 16);
+
+    __m128 * onev = (__m128*)_mm_malloc(sizeof(float), 16);
+    __m128 * pponev = (__m128*)_mm_malloc(sizeof(float), 16);
+    __m128 * twov = (__m128*)_mm_malloc(sizeof(float), 16);
 
     *onev = _mm_set1_ps(1.f);
     *pponev = _mm_set1_ps(0.01f);
     *twov = _mm_set1_ps(2.f);
 
+
     for (int i = 0; i < N; i++) {
-        mVec->f[i] = (float) (2 + rand() % 10); // same as mVec[i/4].f[i%4]
-        nVec->f[i] = (float) (2 + rand() % 10);
-        LVec->f[i] = 0.0;
-        for (int j = 0; j < mVec->f[i]; j++) {
-            LVec->f[i] += randpval();
+        mVec[i] = (float) (2 + rand() % 10); // same as mVec[i/4].f[i%4]
+        nVec[i] = (float) (2 + rand() % 10);
+        LVec[i] = 0.0;
+        for (int j = 0; j < mVec[i]; j++) {
+            LVec[i] += randpval();
         }
-        RVec->f[i] = 0.0;
-        for (int j = 0; j < nVec->f[i]; j++) {
-            RVec->f[i] += randpval();
+        RVec[i] = 0.0;
+        for (int j = 0; j < nVec[i]; j++) {
+            RVec[i] += randpval();
         }
-        CVec->f[i] = 0.0;
-        for (int j = 0; j < mVec->f[i] * nVec->f[i]; j++) {
-            CVec->f[i] += randpval();
+        CVec[i] = 0.0;
+        for (int j = 0; j < mVec[i] * nVec[i]; j++) {
+            CVec[i] += randpval();
         }
-        FVec->f[i] = 0.0;
-        assert(mVec->f[i] >= 2.0 && mVec->f[i] <= 12.0);
-        assert(nVec->f[i] >= 2.0 && nVec->f[i] <= 12.0);
-        assert(LVec->f[i] > 0.0 && LVec->f[i] <= 1.0 * mVec->f[i]);
-        assert(RVec->f[i] > 0.0 && RVec->f[i] <= 1.0 * nVec->f[i]);
-        assert(CVec->f[i] > 0.0 && CVec->f[i] <= 1.0 * mVec->f[i] * nVec->f[i]);
+        FVec[i] = 0.0;
+        assert(mVec[i] >= 2.0 && mVec[i] <= 12.0);
+        assert(nVec[i] >= 2.0 && nVec[i] <= 12.0);
+        assert(LVec[i] > 0.0 && LVec[i] <= 1.0 * mVec[i]);
+        assert(RVec[i] > 0.0 && RVec[i] <= 1.0 * nVec[i]);
+        assert(CVec[i] > 0.0 && CVec[i] <= 1.0 * mVec[i] * nVec[i]);
     }
 
     double timeTotal = 0.0f;
     for (int j = 0; j < iters; j++) {
         double time0 = gettime();
         //Set MAX to 0
-        maxv->v = _mm_set1_ps(0.f);
+        *maxv__m128 = _mm_set1_ps(0.f);
         maxF = 0.0f;
 
         for (int i = 0; i < N/4; i++) {
             //float num_0 = LVec[i] + RVec[i];
-            *vec_num_0 = _mm_add_ps(LVec[i].v, RVec[i].v);
+            *vec_num_0 = _mm_add_ps(LVec__m128[i], RVec__m128[i]);
 
             //float num_1 = mVec[i] * (mVec[i] - 1.0) / 2.0;
-            *vec_num_1 = _mm_sub_ps(mVec[i].v, *onev);
+            *vec_num_1 = _mm_sub_ps(mVec__m128[i], *onev);
             *vec_num_1 = _mm_div_ps(*vec_num_1,*twov);
-            *vec_num_1 = _mm_mul_ps(*vec_num_1,mVec[i].v);
+            *vec_num_1 = _mm_mul_ps(*vec_num_1,mVec__m128[i]);
 
             //float num_2 = nVec[i] * (nVec[i] - 1.0) / 2.0;
-            *vec_num_2 = _mm_sub_ps(nVec[i].v, *onev);
+            *vec_num_2 = _mm_sub_ps(nVec__m128[i], *onev);
             *vec_num_2 = _mm_div_ps(*vec_num_2,*twov);
-            *vec_num_2 = _mm_mul_ps(*vec_num_2,nVec[i].v);
+            *vec_num_2 = _mm_mul_ps(*vec_num_2,nVec__m128[i]);
 
             //float num = num_0 / (num_1 + num_2);
             *vec_num = _mm_add_ps(*vec_num_1, *vec_num_2);
             *vec_num = _mm_div_ps(*vec_num_0,*vec_num);
 
             //float den_0 = CVec[i] - LVec[i] - RVec[i];
-            *vec_den_0 = _mm_sub_ps(CVec[i].v, LVec[i].v);
-            *vec_den_0 = _mm_sub_ps(*vec_den_0, RVec[i].v);
+            *vec_den_0 = _mm_sub_ps(CVec__m128[i], LVec__m128[i]);
+            *vec_den_0 = _mm_sub_ps(*vec_den_0, RVec__m128[i]);
 
             //float den_1 = mVec[i] * nVec[i];
-            *vec_den_1 = _mm_mul_ps(mVec[i].v ,nVec[i].v);
+            *vec_den_1 = _mm_mul_ps(mVec__m128[i] ,nVec__m128[i]);
 
             //float den = den_0 / den_1;
             *vec_den = _mm_div_ps(*vec_den_0 ,*vec_den_1);
 
             //FVec[i] = num / (den + 0.01);
-            FVec[i].v = _mm_add_ps(*vec_den, *pponev);
-            FVec[i].v = _mm_div_ps(*vec_num ,FVec[i].v);
+            FVec__m128[i] = _mm_add_ps(*vec_den, *pponev);
+            FVec__m128[i] = _mm_div_ps(*vec_num ,FVec__m128[i]);
 
             //maxF = FVec->f[j] > maxF ? FVec->f[j] : maxF;
-            maxv->v = _mm_max_ps(maxv->v, FVec[i].v);
+            *maxv__m128 = _mm_max_ps(*maxv__m128, FVec__m128[i]);
         }
 
         for(int j = 0 ; j < 4 ; j++){
-            maxF = maxv->f[j] > maxF ? maxv->f[j] : maxF;
+            maxF = maxv[j] > maxF ? maxv[j] : maxF;
         }
 
         for(int j = N - k ; j < N ; j ++){
             // use scalar (traditional) way to compute remainigs of array ( N%4 iterations )
-            float num_0 = LVec->f[j] + RVec->f[j];
-            float num_1 = mVec->f[j] * (mVec->f[j] - 1.f) / 2.f;
-            float num_2 = nVec->f[j] * (nVec->f[j] - 1.f) / 2.f;
+            float num_0 = LVec[j] + RVec[j];
+            float num_1 = mVec[j] * (mVec[j] - 1.f) / 2.f;
+            float num_2 = nVec[j] * (nVec[j] - 1.f) / 2.f;
             float num = num_0 / (num_1 + num_2);
-            float den_0 = CVec->f[j] - LVec->f[j] - RVec->f[j];
-            float den_1 = mVec->f[j] * nVec->f[j];
+            float den_0 = CVec[j] - LVec[j] - RVec[j];
+            float den_1 = mVec[j] * nVec[j];
             float den = den_0 / den_1;
-            FVec->f[j] = num / (den + 0.01f);
-            maxF = FVec->f[j] > maxF ? FVec->f[j] : maxF;
+            FVec[j] = num / (den + 0.01f);
+            maxF = FVec[j] > maxF ? FVec[j] : maxF;
         }
         double time1 = gettime();
         timeTotal += time1 - time0;

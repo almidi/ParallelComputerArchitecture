@@ -45,19 +45,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/almidi/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.4445.84/bin/cmake/bin/cmake
+CMAKE_COMMAND = /home/almidi/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.4668.70/bin/cmake/bin/cmake
 
 # The command to remove a file.
-RM = /home/almidi/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.4445.84/bin/cmake/bin/cmake -E remove -f
+RM = /home/almidi/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.4668.70/bin/cmake/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/almidi/TUC/PCA/ParallelComputerArchitecture/Project2/Proj2Ref
+CMAKE_SOURCE_DIR = /hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project2/Proj2Ref
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/almidi/TUC/PCA/ParallelComputerArchitecture/Project2/Proj2Ref/cmake-build-debug
+CMAKE_BINARY_DIR = /hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project2/Proj2Ref/cmake-build-debug
 
 #=============================================================================
 # Target rules for target CMakeFiles/Proj2Ref.dir
@@ -66,7 +66,7 @@ CMAKE_BINARY_DIR = /home/almidi/TUC/PCA/ParallelComputerArchitecture/Project2/Pr
 CMakeFiles/Proj2Ref.dir/all:
 	$(MAKE) -f CMakeFiles/Proj2Ref.dir/build.make CMakeFiles/Proj2Ref.dir/depend
 	$(MAKE) -f CMakeFiles/Proj2Ref.dir/build.make CMakeFiles/Proj2Ref.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/almidi/TUC/PCA/ParallelComputerArchitecture/Project2/Proj2Ref/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target Proj2Ref"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project2/Proj2Ref/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target Proj2Ref"
 .PHONY : CMakeFiles/Proj2Ref.dir/all
 
 # Include target in all.
@@ -76,9 +76,9 @@ all: CMakeFiles/Proj2Ref.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Proj2Ref.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/almidi/TUC/PCA/ParallelComputerArchitecture/Project2/Proj2Ref/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project2/Proj2Ref/cmake-build-debug/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Proj2Ref.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/almidi/TUC/PCA/ParallelComputerArchitecture/Project2/Proj2Ref/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project2/Proj2Ref/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/Proj2Ref.dir/rule
 
 # Convenience name for target.

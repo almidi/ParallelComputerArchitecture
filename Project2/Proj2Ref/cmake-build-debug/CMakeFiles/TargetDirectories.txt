@@ -1,3 +1,3 @@
-/home/almidi/TUC/PCA/ParallelComputerArchitecture/Project2/Proj2Ref/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/almidi/TUC/PCA/ParallelComputerArchitecture/Project2/Proj2Ref/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/almidi/TUC/PCA/ParallelComputerArchitecture/Project2/Proj2Ref/cmake-build-debug/CMakeFiles/Proj2Ref.dir
+/hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project2/Proj2Ref/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project2/Proj2Ref/cmake-build-debug/CMakeFiles/edit_cache.dir
+/hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project2/Proj2Ref/cmake-build-debug/CMakeFiles/Proj2Ref.dir

@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/almidi/TUC/PCA/ParallelComputerArchitecture/Project2/Proj2SSE/main.cpp
+/hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project2/Proj2SSE/main.cpp
 stdio.h
 -
 stdlib.h

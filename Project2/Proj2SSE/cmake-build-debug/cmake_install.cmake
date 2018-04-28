@@ -1,4 +1,4 @@
-# Install script for directory: /home/almidi/TUC/PCA/ParallelComputerArchitecture/Project2/Proj2SSE
+# Install script for directory: /hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project2/Proj2SSE
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/almidi/TUC/PCA/ParallelComputerArchitecture/Project2/Proj2SSE/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project2/Proj2SSE/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

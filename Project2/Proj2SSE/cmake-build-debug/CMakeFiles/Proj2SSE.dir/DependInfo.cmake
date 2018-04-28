@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/almidi/TUC/PCA/ParallelComputerArchitecture/Project2/Proj2SSE/main.cpp" "/home/almidi/TUC/PCA/ParallelComputerArchitecture/Project2/Proj2SSE/cmake-build-debug/CMakeFiles/Proj2SSE.dir/main.cpp.o"
+  "/hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project2/Proj2SSE/main.cpp" "/hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project2/Proj2SSE/cmake-build-debug/CMakeFiles/Proj2SSE.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
