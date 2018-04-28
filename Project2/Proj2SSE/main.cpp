@@ -20,12 +20,9 @@ float randpval() {
 }
 
 int main(int argc, char **argv) {
-    struct vec
-    {
-        union {
-            __m128 v;
-            float f[4];
-        };
+    union vec{
+        __m128 v;
+        float f[4];
     };
 
     //  Check arguments
@@ -40,26 +37,19 @@ int main(int argc, char **argv) {
     float maxF = 0.0f;
     srand(1);
 
-    struct vec* mVec;
-    mVec = (vec*)_mm_malloc(sizeof(vec)*N, 16);
+    union vec* mVec = (vec*)_mm_malloc(sizeof(vec)*((N/4) + 1), 16);
     assert(mVec != NULL);
-    struct vec* nVec;
-    nVec = (vec*)_mm_malloc(sizeof(vec)*N, 16);
+    union vec* nVec = (vec*)_mm_malloc(sizeof(vec)*((N/4) + 1), 16);
     assert(nVec != NULL);
-    struct vec* LVec;
-    LVec = (vec*)_mm_malloc(sizeof(vec)*N, 16);
+    union vec* LVec = (vec*)_mm_malloc(sizeof(vec)*((N/4) + 1), 16);
     assert(LVec != NULL);
-    struct vec* RVec;
-    RVec = (vec*)_mm_malloc(sizeof(vec)*N, 16);
+    union vec* RVec = (vec*)_mm_malloc(sizeof(vec)*((N/4) + 1), 16);
     assert(RVec != NULL);
-    struct vec* CVec;
-    CVec = (vec*)_mm_malloc(sizeof(vec)*N, 16);
+    union vec* CVec = (vec*)_mm_malloc(sizeof(vec)*((N/4) + 1), 16);
     assert(CVec != NULL);
-    struct vec* FVec;
-    FVec = (vec*)_mm_malloc(sizeof(vec)*N, 16);
+    union vec* FVec = (vec*)_mm_malloc(sizeof(vec)*((N/4) + 1), 16);
     assert(FVec != NULL);
-    struct vec* maxv;
-    maxv = (vec*)_mm_malloc(sizeof(vec), 16);
+    union vec* maxv = (vec*)_mm_malloc(sizeof(vec), 16);
     assert(maxv != NULL);
 
     __m128 * vec_num = (__m128*)_mm_malloc(sizeof(float)*4, 16);
