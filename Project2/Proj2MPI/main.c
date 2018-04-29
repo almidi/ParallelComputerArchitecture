@@ -89,7 +89,7 @@ int main(int argc, char **argv) {
     __m128 *RVec__m128 = (__m128 *) RVec;
     __m128 *CVec__m128 = (__m128 *) CVec;
     __m128 *FVec__m128 = (__m128 *) FVec;
-    __m128 maxv__m128 = _mm_setzero_ps();
+    __m128 *maxv__m128 = (__m128 *) maxv;
 
     __m128 vec_num;
     __m128 vec_num_0;
@@ -146,15 +146,14 @@ int main(int argc, char **argv) {
             FVec__m128[i] = _mm_add_ps(vec_den, pponev);
             FVec__m128[i] = _mm_div_ps(vec_num, FVec__m128[i]);
 
-            //maxF = FVec->f[j] > maxF ? FVec->f[j] : maxF;
-            maxv__m128 = _mm_max_ps(maxv__m128, FVec__m128[i]);
-            maxF = ((float) maxv__m128) > maxF ? maxv__m128 : maxF;
-            printf("%f\n", maxF);
+            //maxF = FVec[i]>maxF?FVec[i]:maxF;
+            *maxv__m128 = _mm_max_ps(*maxv__m128, FVec__m128[i]);
         }
-//        for (int index = 0; index < 4; index++) {
-//            maxF = maxv[index] > maxF ? maxv[index] : maxF;
-//        }
 
+        for (int index = 0; index < 4; index++) {
+            maxF = maxv[index] > maxF ? maxv[index] : maxF;
+        }
+        printf("%f\n", maxF);
 //        for (int jj = N - k; jj < N; jj++) {
 ////             use scalar (traditional) way to compute remaining of array ( N%4 iterations )
 //            float num_0 = LVec[jj] + RVec[jj];
@@ -171,17 +170,15 @@ int main(int argc, char **argv) {
         timeTotal += time1 - time0;
     }
 
-
-    // Finalize the MPI environment.
-
-
+    printf("%f %f\n", maxF, &maxF);
     float *processMax = world_rank ? NULL : (float *) malloc(sizeof(float) * world_size);
-
-    printf("%d) %f\n", world_rank, maxF);
     MPI_Gather(&maxF, 1, MPI_FLOAT, processMax, 1, MPI_FLOAT, 0, MPI_COMM_WORLD);
 
+    // Finalize the MPI environment.
     MPI_Barrier(MPI_COMM_WORLD);
     MPI_Finalize();
+
+    printf("---------------\n");
 
     if (!world_rank) {
         float globalMax = 0;

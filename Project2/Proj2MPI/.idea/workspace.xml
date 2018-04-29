@@ -12,19 +12,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d84dc88a-695e-4868-b420-6a31b937e5ba" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/../Proj2Ref/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proj2MPI.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proj2MPI.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proj2MPI.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proj2MPI.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proj2MPI.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Proj2MPI.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Proj2Ref/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Proj2Ref/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proj2SSE/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Proj2SSE/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proj2SSE/cmake-build-debug/Proj2SSE" beforeDir="false" afterPath="$PROJECT_DIR$/../Proj2SSE/cmake-build-debug/Proj2SSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Proj2SSE/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/../Proj2SSE/main.c" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,8 +32,8 @@
       <file leaf-file-name="main.c" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="151" column="66" selection-start-line="151" selection-start-column="66" selection-end-line="151" selection-end-column="66" />
+            <state relative-caret-position="299">
+              <caret line="156" column="29" lean-forward="true" selection-start-line="156" selection-start-column="29" selection-end-line="156" selection-end-column="29" />
               <folding>
                 <element signature="e#122#256#0" />
                 <element signature="e#258#418#0" />
@@ -77,7 +69,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="4">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="801" />
     <option name="width" value="799" />
     <option name="height" value="878" />
@@ -108,20 +100,22 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Proj2MPI_2x100000 (1)">
+  <component name="RunManager" selected="Application.Proj2MPI_1x100000">
     <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Proj2MPI" RUN_TARGET_NAME="Proj2MPI" EXPLICIT_BUILD_TARGET_NAME="all" />
-    <configuration name="Proj2MPI_2x100" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="100 2" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Proj2MPI" TARGET_NAME="Proj2MPI" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Proj2MPI" RUN_TARGET_NAME="Proj2MPI" />
-    <configuration name="Proj2MPI_2x1000" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="1000 2" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Proj2MPI" TARGET_NAME="Proj2MPI" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Proj2MPI" RUN_TARGET_NAME="Proj2MPI" />
-    <configuration name="Proj2MPI_2x10000" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="10000 2" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Proj2MPI" TARGET_NAME="Proj2MPI" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Proj2MPI" RUN_TARGET_NAME="Proj2MPI" />
-    <configuration name="Proj2MPI_2x100000 (1)" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="-np 1 $PROJECT_DIR$/cmake-build-debug/Proj2MPI 100000" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Proj2MPI" TARGET_NAME="Proj2MPI" CONFIG_NAME="Debug" RUN_PATH="/usr/bin/mpirun" />
-    <configuration name="Proj2MPI_2x100000" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="100000 2" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Proj2MPI" TARGET_NAME="Proj2MPI" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Proj2MPI" RUN_TARGET_NAME="Proj2MPI" />
+    <configuration name="Proj2MPI_1x100000" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="-np 1 $PROJECT_DIR$/cmake-build-debug/Proj2MPI 100000" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Proj2MPI" TARGET_NAME="Proj2MPI" CONFIG_NAME="Debug" RUN_PATH="/usr/bin/mpirun" />
+    <configuration name="Proj2MPI_2x100" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="-np 2 $PROJECT_DIR$/cmake-build-debug/Proj2MPI 100" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Proj2MPI" TARGET_NAME="Proj2MPI" CONFIG_NAME="Debug" RUN_PATH="/usr/bin/mpirun" />
+    <configuration name="Proj2MPI_2x1000" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="-np 2 $PROJECT_DIR$/cmake-build-debug/Proj2MPI 1000" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Proj2MPI" TARGET_NAME="Proj2MPI" CONFIG_NAME="Debug" RUN_PATH="/usr/bin/mpirun" />
+    <configuration name="Proj2MPI_2x10000" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="-np 2 $PROJECT_DIR$/cmake-build-debug/Proj2MPI 10000" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Proj2MPI" TARGET_NAME="Proj2MPI" CONFIG_NAME="Debug" RUN_PATH="/usr/bin/mpirun" />
+    <configuration name="Proj2MPI_2x100000" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="-np 2 $PROJECT_DIR$/cmake-build-debug/Proj2MPI 100000" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Proj2MPI" TARGET_NAME="Proj2MPI" CONFIG_NAME="Debug" RUN_PATH="/usr/bin/mpirun" />
+    <configuration name="Proj2MPI_4x100000" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="-np 4 $PROJECT_DIR$/cmake-build-debug/Proj2MPI 100000" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Proj2MPI" TARGET_NAME="Proj2MPI" CONFIG_NAME="Debug" RUN_PATH="/usr/bin/mpirun" />
     <list>
       <item itemvalue="Application.Build All" />
+      <item itemvalue="Application.Proj2MPI_1x100000" />
       <item itemvalue="Application.Proj2MPI_2x100" />
       <item itemvalue="Application.Proj2MPI_2x1000" />
       <item itemvalue="Application.Proj2MPI_2x10000" />
       <item itemvalue="Application.Proj2MPI_2x100000" />
-      <item itemvalue="Application.Proj2MPI_2x100000 (1)" />
+      <item itemvalue="Application.Proj2MPI_4x100000" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -140,7 +134,7 @@
       <workItem from="1525017004089" duration="88000" />
       <workItem from="1525017105029" duration="1329000" />
       <workItem from="1525019965761" duration="3845000" />
-      <workItem from="1525025550691" duration="7188000" />
+      <workItem from="1525025550691" duration="9314000" />
     </task>
     <task id="LOCAL-00001" summary="Project rebased">
       <created>1525015338539</created>
@@ -156,34 +150,41 @@
       <option name="project" value="LOCAL" />
       <updated>1525015420399</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Trying to fix max values in MPI implementation">
+      <created>1525033333913</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1525033333914</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14306000" />
+    <option name="totallyTimeSpent" value="16432000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="801" y="0" width="799" height="878" extended-state="4" />
+    <frame x="0" y="0" width="1600" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.3101673" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info active="true" anchor="bottom" id="Messages" order="7" visible="true" weight="0.32712767" />
-      <window_info anchor="bottom" id="CMake" order="7" weight="0.32978722" />
+      <window_info anchor="bottom" id="TODO" order="5" />
+      <window_info anchor="right" id="Messages" order="4" weight="0.20437019" />
+      <window_info anchor="bottom" id="CMake" order="6" weight="0.32978722" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32971507" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32978722" />
-      <window_info anchor="bottom" id="Serial Monitor" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32712767" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32978722" />
+      <window_info anchor="bottom" id="Serial Monitor" order="9" />
+      <window_info active="true" anchor="right" id="Run" order="3" visible="true" weight="0.344473" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32978722" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32978722" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39893618" />
+      <window_info anchor="bottom" id="Debug" order="2" weight="0.39893618" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
@@ -224,7 +225,8 @@
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Project rebased" />
-    <option name="LAST_COMMIT_MESSAGE" value="Project rebased" />
+    <MESSAGE value="Trying to fix max values in MPI implementation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Trying to fix max values in MPI implementation" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -318,10 +320,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file:///usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/xmmintrin.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="231" selection-start-line="231" selection-end-line="231" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="151" column="66" selection-start-line="151" selection-start-column="66" selection-end-line="151" selection-end-column="66" />
+        <state relative-caret-position="299">
+          <caret line="156" column="29" lean-forward="true" selection-start-line="156" selection-start-column="29" selection-end-line="156" selection-end-column="29" />
           <folding>
             <element signature="e#122#256#0" />
             <element signature="e#258#418#0" />

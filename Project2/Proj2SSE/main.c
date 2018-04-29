@@ -76,7 +76,7 @@ int main(int argc, char **argv) {
     __m128 *RVec__m128 = (__m128 *) RVec;
     __m128 *CVec__m128 = (__m128 *) CVec;
     __m128 *FVec__m128 = (__m128 *) FVec;
-    __m128 maxv__m128 = _mm_setzero_ps();
+    __m128 *maxv__m128 = (__m128 *) maxv;
 
     __m128 vec_num;
     __m128 vec_num_0;
@@ -130,7 +130,7 @@ int main(int argc, char **argv) {
             FVec__m128[i] = _mm_div_ps(vec_num, FVec__m128[i]);
 
             //maxF = FVec->f[j] > maxF ? FVec->f[j] : maxF;
-            maxv__m128 = _mm_max_ps(maxv__m128, FVec__m128[i]);
+            *maxv__m128 = _mm_max_ps(*maxv__m128, FVec__m128[i]);
         }
 
         for (int index = 0; index < 4; index++) {
