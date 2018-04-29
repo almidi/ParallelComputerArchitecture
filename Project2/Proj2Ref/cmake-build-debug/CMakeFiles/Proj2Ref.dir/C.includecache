@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/tzanis/Workspace/Clion/ParallelComputerArchitecture/Project2/Proj2SSE/main.cpp
+/home/tzanis/Workspace/Clion/ParallelComputerArchitecture/Project2/Proj2Ref/main.c
 stdio.h
 -
 stdlib.h
@@ -16,7 +16,5 @@ time.h
 sys/time.h
 -
 assert.h
--
-xmmintrin.h
 -
 

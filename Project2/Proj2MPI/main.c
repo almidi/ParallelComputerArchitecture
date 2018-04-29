@@ -20,12 +20,13 @@ float randpval() {
 
 int main(int argc, char **argv) {
     //  Check arguments
-    if (argc != 2) {
+    if (argc != 3) {
         printf("Invalid Arguments\n");
         return -1;
     }
 
     int N = atoi(argv[1]);
+    int P = atoi(argv[2]);
     int k = N%4;
     int iters = 1000;
     float maxF = 0.0f;
@@ -158,5 +159,4 @@ int main(int argc, char **argv) {
     _mm_free(LVec);
     _mm_free(RVec);
     _mm_free(CVec);
-    _mm_free(maxv);
 }

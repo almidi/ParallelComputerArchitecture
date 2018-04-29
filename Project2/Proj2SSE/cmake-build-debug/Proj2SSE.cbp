@@ -44,9 +44,6 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/../../../../include/c++/7.3.1"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/../../../../include/c++/7.3.1/x86_64-pc-linux-gnu"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/../../../../include/c++/7.3.1/backward"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include-fixed"/>
@@ -66,9 +63,6 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/../../../../include/c++/7.3.1"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/../../../../include/c++/7.3.1/x86_64-pc-linux-gnu"/>
-					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/../../../../include/c++/7.3.1/backward"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include"/>
 					<Add directory="/usr/local/include"/>
 					<Add directory="/usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include-fixed"/>
@@ -82,7 +76,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/tzanis/Workspace/Clion/ParallelComputerArchitecture/Project2/Proj2SSE/main.cpp">
+		<Unit filename="/home/tzanis/Workspace/Clion/ParallelComputerArchitecture/Project2/Proj2SSE/main.c">
 			<Option target="Proj2SSE"/>
 		</Unit>
 		<Unit filename="/home/tzanis/Workspace/Clion/ParallelComputerArchitecture/Project2/Proj2SSE/CMakeLists.txt">

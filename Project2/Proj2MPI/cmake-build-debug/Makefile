@@ -123,32 +123,32 @@ Proj2MPI/fast:
 	$(MAKE) -f CMakeFiles/Proj2MPI.dir/build.make CMakeFiles/Proj2MPI.dir/build
 .PHONY : Proj2MPI/fast
 
-main.o: main.cpp.o
+main.o: main.c.o
 
 .PHONY : main.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) -f CMakeFiles/Proj2MPI.dir/build.make CMakeFiles/Proj2MPI.dir/main.cpp.o
-.PHONY : main.cpp.o
+main.c.o:
+	$(MAKE) -f CMakeFiles/Proj2MPI.dir/build.make CMakeFiles/Proj2MPI.dir/main.c.o
+.PHONY : main.c.o
 
-main.i: main.cpp.i
+main.i: main.c.i
 
 .PHONY : main.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) -f CMakeFiles/Proj2MPI.dir/build.make CMakeFiles/Proj2MPI.dir/main.cpp.i
-.PHONY : main.cpp.i
+main.c.i:
+	$(MAKE) -f CMakeFiles/Proj2MPI.dir/build.make CMakeFiles/Proj2MPI.dir/main.c.i
+.PHONY : main.c.i
 
-main.s: main.cpp.s
+main.s: main.c.s
 
 .PHONY : main.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) -f CMakeFiles/Proj2MPI.dir/build.make CMakeFiles/Proj2MPI.dir/main.cpp.s
-.PHONY : main.cpp.s
+main.c.s:
+	$(MAKE) -f CMakeFiles/Proj2MPI.dir/build.make CMakeFiles/Proj2MPI.dir/main.c.s
+.PHONY : main.c.s
 
 # Help Target
 help:

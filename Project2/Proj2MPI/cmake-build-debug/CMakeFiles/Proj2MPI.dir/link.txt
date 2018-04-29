@@ -1,1 +1,1 @@
-/usr/bin/c++  -g   CMakeFiles/Proj2MPI.dir/main.cpp.o  -o Proj2MPI 
+/usr/bin/cc -g   CMakeFiles/Proj2MPI.dir/main.c.o  -o Proj2MPI 

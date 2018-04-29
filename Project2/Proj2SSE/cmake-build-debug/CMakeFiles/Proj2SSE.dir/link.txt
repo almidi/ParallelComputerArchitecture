@@ -1,1 +1,1 @@
-/usr/bin/c++  -msse4.2 -g   CMakeFiles/Proj2SSE.dir/main.cpp.o  -o Proj2SSE 
+/usr/bin/cc -g   CMakeFiles/Proj2SSE.dir/main.c.o  -o Proj2SSE 
