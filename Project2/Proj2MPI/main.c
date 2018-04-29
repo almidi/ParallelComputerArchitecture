@@ -59,6 +59,8 @@ int main(int argc, char **argv) {
     float *maxv = (float *) _mm_malloc(sizeof(float), 16);
     assert(maxv != NULL);
 
+    for (int i = 0; i < 4; i++) maxv[i] = -1;
+
     for (int i = 0; i < N; i++) {
         mVec[i] = (float) (2 + rand() % 10); // same as mVec[i/4].f[i%4]
         nVec[i] = (float) (2 + rand() % 10);
@@ -153,7 +155,7 @@ int main(int argc, char **argv) {
         for (int index = 0; index < 4; index++) {
             maxF = maxv[index] > maxF ? maxv[index] : maxF;
         }
-        printf("%f\n", maxF);
+//        printf("%f\n", maxF);
 //        for (int jj = N - k; jj < N; jj++) {
 ////             use scalar (traditional) way to compute remaining of array ( N%4 iterations )
 //            float num_0 = LVec[jj] + RVec[jj];
@@ -170,7 +172,7 @@ int main(int argc, char **argv) {
         timeTotal += time1 - time0;
     }
 
-    printf("%f %f\n", maxF, &maxF);
+//    printf("%f\n", maxF);
     float *processMax = world_rank ? NULL : (float *) malloc(sizeof(float) * world_size);
     MPI_Gather(&maxF, 1, MPI_FLOAT, processMax, 1, MPI_FLOAT, 0, MPI_COMM_WORLD);
 
@@ -178,12 +180,12 @@ int main(int argc, char **argv) {
     MPI_Barrier(MPI_COMM_WORLD);
     MPI_Finalize();
 
-    printf("---------------\n");
+//    printf("---------------\n");
 
     if (!world_rank) {
         float globalMax = 0;
         for (int i = 0; i < world_size; i++) {
-            printf("%f\n", processMax[i]);
+//            printf("%f\n", processMax[i]);
             globalMax = globalMax < processMax[i] ? processMax[i] : globalMax;
         }
         printf("Time %f Max %f\n", timeTotal / iters, globalMax);

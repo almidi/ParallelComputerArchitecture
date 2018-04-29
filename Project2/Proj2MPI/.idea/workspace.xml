@@ -32,8 +32,8 @@
       <file leaf-file-name="main.c" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="156" column="29" lean-forward="true" selection-start-line="156" selection-start-column="29" selection-end-line="156" selection-end-column="29" />
+            <state relative-caret-position="453">
+              <caret line="188" column="44" lean-forward="true" selection-start-line="188" selection-start-column="44" selection-end-line="188" selection-end-column="44" />
               <folding>
                 <element signature="e#122#256#0" />
                 <element signature="e#258#418#0" />
@@ -100,7 +100,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Proj2MPI_1x100000">
+  <component name="RunManager" selected="Application.Proj2MPI_4x100000">
     <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Proj2MPI" RUN_TARGET_NAME="Proj2MPI" EXPLICIT_BUILD_TARGET_NAME="all" />
     <configuration name="Proj2MPI_1x100000" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="-np 1 $PROJECT_DIR$/cmake-build-debug/Proj2MPI 100000" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Proj2MPI" TARGET_NAME="Proj2MPI" CONFIG_NAME="Debug" RUN_PATH="/usr/bin/mpirun" />
     <configuration name="Proj2MPI_2x100" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="-np 2 $PROJECT_DIR$/cmake-build-debug/Proj2MPI 100" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Proj2MPI" TARGET_NAME="Proj2MPI" CONFIG_NAME="Debug" RUN_PATH="/usr/bin/mpirun" />
@@ -134,7 +134,7 @@
       <workItem from="1525017004089" duration="88000" />
       <workItem from="1525017105029" duration="1329000" />
       <workItem from="1525019965761" duration="3845000" />
-      <workItem from="1525025550691" duration="9314000" />
+      <workItem from="1525025550691" duration="10172000" />
     </task>
     <task id="LOCAL-00001" summary="Project rebased">
       <created>1525015338539</created>
@@ -157,11 +157,18 @@
       <option name="project" value="LOCAL" />
       <updated>1525033333914</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Trying to fix max values in MPI implementation">
+      <created>1525035321301</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1525035321301</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16432000" />
+    <option name="totallyTimeSpent" value="17290000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1600" height="878" extended-state="6" />
@@ -174,7 +181,7 @@
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32971507" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32978722" />
       <window_info anchor="bottom" id="Serial Monitor" order="9" />
-      <window_info active="true" anchor="right" id="Run" order="3" visible="true" weight="0.344473" />
+      <window_info active="true" anchor="right" id="Run" order="3" visible="true" weight="0.36696658" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32978722" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -329,8 +336,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="156" column="29" lean-forward="true" selection-start-line="156" selection-start-column="29" selection-end-line="156" selection-end-column="29" />
+        <state relative-caret-position="453">
+          <caret line="188" column="44" lean-forward="true" selection-start-line="188" selection-start-column="44" selection-end-line="188" selection-end-column="44" />
           <folding>
             <element signature="e#122#256#0" />
             <element signature="e#258#418#0" />

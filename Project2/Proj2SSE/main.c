@@ -46,6 +46,8 @@ int main(int argc, char **argv) {
     float* maxv = (float*)_mm_malloc(sizeof(float), 16);
     assert(maxv != NULL);
 
+    for (int i = 0; i < 4; i++) maxv[i] = -1;
+
     for (int i = 0; i < N; i++) {
         mVec[i] = (float) (2 + rand() % 10); // same as mVec[i/4].f[i%4]
         nVec[i] = (float) (2 + rand() % 10);
