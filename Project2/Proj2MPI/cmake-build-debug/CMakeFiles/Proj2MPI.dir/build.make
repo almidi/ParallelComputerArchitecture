@@ -60,15 +60,15 @@ include CMakeFiles/Proj2MPI.dir/flags.make
 CMakeFiles/Proj2MPI.dir/main.c.o: CMakeFiles/Proj2MPI.dir/flags.make
 CMakeFiles/Proj2MPI.dir/main.c.o: ../main.c
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/tzanis/Workspace/Clion/ParallelComputerArchitecture/Project2/Proj2MPI/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/Proj2MPI.dir/main.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Proj2MPI.dir/main.c.o   -c /home/tzanis/Workspace/Clion/ParallelComputerArchitecture/Project2/Proj2MPI/main.c
+	mpicc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Proj2MPI.dir/main.c.o   -c /home/tzanis/Workspace/Clion/ParallelComputerArchitecture/Project2/Proj2MPI/main.c
 
 CMakeFiles/Proj2MPI.dir/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Proj2MPI.dir/main.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tzanis/Workspace/Clion/ParallelComputerArchitecture/Project2/Proj2MPI/main.c > CMakeFiles/Proj2MPI.dir/main.c.i
+	mpicc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/tzanis/Workspace/Clion/ParallelComputerArchitecture/Project2/Proj2MPI/main.c > CMakeFiles/Proj2MPI.dir/main.c.i
 
 CMakeFiles/Proj2MPI.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Proj2MPI.dir/main.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tzanis/Workspace/Clion/ParallelComputerArchitecture/Project2/Proj2MPI/main.c -o CMakeFiles/Proj2MPI.dir/main.c.s
+	mpicc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/tzanis/Workspace/Clion/ParallelComputerArchitecture/Project2/Proj2MPI/main.c -o CMakeFiles/Proj2MPI.dir/main.c.s
 
 CMakeFiles/Proj2MPI.dir/main.c.o.requires:
 

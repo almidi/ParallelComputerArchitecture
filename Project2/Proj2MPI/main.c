@@ -3,6 +3,7 @@
 #include <sys/time.h>
 #include <assert.h>
 #include <xmmintrin.h>
+#include <mpi.h>
 
 double gettime(void) {
     struct timeval ttime;
@@ -20,31 +21,42 @@ float randpval() {
 
 int main(int argc, char **argv) {
     //  Check arguments
-    if (argc != 3) {
+    if (argc != 2) {
         printf("Invalid Arguments\n");
         return -1;
     }
 
+
+    // Initialize the MPI environment
+    MPI_Init(NULL, NULL);
+    // Get the number of processes
+    int world_size;
+    MPI_Comm_size(MPI_COMM_WORLD, &world_size);
+
+    // Get the rank of the process
+    int world_rank;
+    MPI_Comm_rank(MPI_COMM_WORLD, &world_rank);
+
+
     int N = atoi(argv[1]);
-    int P = atoi(argv[2]);
-    int k = N%4;
+    int k = N % 4;
     int iters = 1000;
     float maxF = 0.0f;
     srand(1);
 
-    float* mVec = (float*)_mm_malloc(sizeof(float)*N, 16);
+    float *mVec = (float *) _mm_malloc(sizeof(float) * N, 16);
     assert(mVec != NULL);
-    float* nVec = (float*)_mm_malloc(sizeof(float)*N, 16);
+    float *nVec = (float *) _mm_malloc(sizeof(float) * N, 16);
     assert(nVec != NULL);
-    float* LVec = (float*)_mm_malloc(sizeof(float)*N, 16);
+    float *LVec = (float *) _mm_malloc(sizeof(float) * N, 16);
     assert(LVec != NULL);
-    float* RVec = (float*)_mm_malloc(sizeof(float)*N, 16);
+    float *RVec = (float *) _mm_malloc(sizeof(float) * N, 16);
     assert(RVec != NULL);
-    float* CVec = (float*)_mm_malloc(sizeof(float)*N, 16);
+    float *CVec = (float *) _mm_malloc(sizeof(float) * N, 16);
     assert(CVec != NULL);
-    float* FVec = (float*)_mm_malloc(sizeof(float)*N, 16);
+    float *FVec = (float *) _mm_malloc(sizeof(float) * N, 16);
     assert(FVec != NULL);
-    float* maxv = (float*)_mm_malloc(sizeof(float), 16);
+    float *maxv = (float *) _mm_malloc(sizeof(float), 16);
     assert(maxv != NULL);
 
     for (int i = 0; i < N; i++) {
@@ -92,13 +104,17 @@ int main(int argc, char **argv) {
     const __m128 twov = _mm_set1_ps(2.f);
 
 
+    int processSize = N / world_size;
+    int start = processSize * world_rank;
+    int end = start + processSize;
+
     double timeTotal = 0.0f;
     for (int j = 0; j < iters; j++) {
         double time0 = gettime();
         //Set MAX to 0
         maxF = 0.0f;
 
-        for (int i = 0; i < N/4; i++) {
+        for (int i = start / 4; i < end / 4; i++) {
             //float num_0 = LVec[i] + RVec[i];
             vec_num_0 = _mm_add_ps(LVec__m128[i], RVec__m128[i]);
 
@@ -132,31 +148,55 @@ int main(int argc, char **argv) {
 
             //maxF = FVec->f[j] > maxF ? FVec->f[j] : maxF;
             maxv__m128 = _mm_max_ps(maxv__m128, FVec__m128[i]);
+            maxF = ((float) maxv__m128) > maxF ? maxv__m128 : maxF;
+            printf("%f\n", maxF);
         }
+//        for (int index = 0; index < 4; index++) {
+//            maxF = maxv[index] > maxF ? maxv[index] : maxF;
+//        }
 
-        for (int index = 0; index < 4; index++) {
-            maxF = maxv[index] > maxF ? maxv[index] : maxF;
-        }
-
-        for (int jj = N - k; jj < N; jj++) {
-            // use scalar (traditional) way to compute remaining of array ( N%4 iterations )
-            float num_0 = LVec[jj] + RVec[jj];
-            float num_1 = mVec[jj] * (mVec[jj] - 1.f) / 2.f;
-            float num_2 = nVec[jj] * (nVec[jj] - 1.f) / 2.f;
-            float num = num_0 / (num_1 + num_2);
-            float den_0 = CVec[jj] - LVec[jj] - RVec[jj];
-            float den_1 = mVec[jj] * nVec[jj];
-            float den = den_0 / den_1;
-            FVec[jj] = num / (den + 0.01f);
-            maxF = FVec[jj] > maxF ? FVec[jj] : maxF;
-        }
+//        for (int jj = N - k; jj < N; jj++) {
+////             use scalar (traditional) way to compute remaining of array ( N%4 iterations )
+//            float num_0 = LVec[jj] + RVec[jj];
+//            float num_1 = mVec[jj] * (mVec[jj] - 1.f) / 2.f;
+//            float num_2 = nVec[jj] * (nVec[jj] - 1.f) / 2.f;
+//            float num = num_0 / (num_1 + num_2);
+//            float den_0 = CVec[jj] - LVec[jj] - RVec[jj];
+//            float den_1 = mVec[jj] * nVec[jj];
+//            float den = den_0 / den_1;
+//            FVec[jj] = num / (den + 0.01f);
+//            maxF = FVec[jj] > maxF ? FVec[jj] : maxF;
+//        }
         double time1 = gettime();
         timeTotal += time1 - time0;
     }
-    printf("Time %f Max %f\n", timeTotal / iters, maxF);
+
+
+    // Finalize the MPI environment.
+
+
+    float *processMax = world_rank ? NULL : (float *) malloc(sizeof(float) * world_size);
+
+    printf("%d) %f\n", world_rank, maxF);
+    MPI_Gather(&maxF, 1, MPI_FLOAT, processMax, 1, MPI_FLOAT, 0, MPI_COMM_WORLD);
+
+    MPI_Barrier(MPI_COMM_WORLD);
+    MPI_Finalize();
+
+    if (!world_rank) {
+        float globalMax = 0;
+        for (int i = 0; i < world_size; i++) {
+            printf("%f\n", processMax[i]);
+            globalMax = globalMax < processMax[i] ? processMax[i] : globalMax;
+        }
+        printf("Time %f Max %f\n", timeTotal / iters, globalMax);
+    }
+    free(processMax);
+
     _mm_free(mVec);
     _mm_free(nVec);
     _mm_free(LVec);
     _mm_free(RVec);
     _mm_free(CVec);
+    return 0;
 }
