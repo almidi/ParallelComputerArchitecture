@@ -13,10 +13,11 @@
   <component name="ChangeListManager">
     <list default="true" id="d84dc88a-695e-4868-b420-6a31b937e5ba" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Proj2SSE/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Proj2SSE/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Proj2SSE/cmake-build-debug/Proj2SSE" beforeDir="false" afterPath="$PROJECT_DIR$/../Proj2SSE/cmake-build-debug/Proj2SSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Proj2SSE/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/../Proj2SSE/main.c" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,15 +30,24 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.c" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="453">
-              <caret line="188" column="44" lean-forward="true" selection-start-line="188" selection-start-column="44" selection-end-line="188" selection-end-column="44" />
+            <state relative-caret-position="70">
+              <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
               <folding>
                 <element signature="e#122#256#0" />
                 <element signature="e#258#418#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="70">
+              <caret line="5" column="27" lean-forward="true" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -55,8 +65,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/main.c" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
       </list>
     </option>
   </component>
@@ -79,11 +89,24 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Proj2MPI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Proj2MPI" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="/usr/bin/mpirun" />
+    <property name="last_opened_file_path" value="/opt/mpich2/bin/mpiexec" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="Errors" />
@@ -100,7 +123,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Proj2MPI_4x100000">
+  <component name="RunManager" selected="Application.Proj2MPI_8x100000">
     <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Proj2MPI" RUN_TARGET_NAME="Proj2MPI" EXPLICIT_BUILD_TARGET_NAME="all" />
     <configuration name="Proj2MPI_1x100000" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="-np 1 $PROJECT_DIR$/cmake-build-debug/Proj2MPI 100000" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Proj2MPI" TARGET_NAME="Proj2MPI" CONFIG_NAME="Debug" RUN_PATH="/usr/bin/mpirun" />
     <configuration name="Proj2MPI_2x100" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="-np 2 $PROJECT_DIR$/cmake-build-debug/Proj2MPI 100" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Proj2MPI" TARGET_NAME="Proj2MPI" CONFIG_NAME="Debug" RUN_PATH="/usr/bin/mpirun" />
@@ -108,6 +131,7 @@
     <configuration name="Proj2MPI_2x10000" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="-np 2 $PROJECT_DIR$/cmake-build-debug/Proj2MPI 10000" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Proj2MPI" TARGET_NAME="Proj2MPI" CONFIG_NAME="Debug" RUN_PATH="/usr/bin/mpirun" />
     <configuration name="Proj2MPI_2x100000" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="-np 2 $PROJECT_DIR$/cmake-build-debug/Proj2MPI 100000" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Proj2MPI" TARGET_NAME="Proj2MPI" CONFIG_NAME="Debug" RUN_PATH="/usr/bin/mpirun" />
     <configuration name="Proj2MPI_4x100000" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="-np 4 $PROJECT_DIR$/cmake-build-debug/Proj2MPI 100000" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Proj2MPI" TARGET_NAME="Proj2MPI" CONFIG_NAME="Debug" RUN_PATH="/usr/bin/mpirun" />
+    <configuration name="Proj2MPI_8x100000" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="-np 8 $PROJECT_DIR$/cmake-build-debug/Proj2MPI 100000" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Proj2MPI" TARGET_NAME="Proj2MPI" CONFIG_NAME="Debug" RUN_PATH="/opt/mpich2/bin/mpiexec" />
     <list>
       <item itemvalue="Application.Build All" />
       <item itemvalue="Application.Proj2MPI_1x100000" />
@@ -116,6 +140,7 @@
       <item itemvalue="Application.Proj2MPI_2x10000" />
       <item itemvalue="Application.Proj2MPI_2x100000" />
       <item itemvalue="Application.Proj2MPI_4x100000" />
+      <item itemvalue="Application.Proj2MPI_8x100000" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -134,7 +159,9 @@
       <workItem from="1525017004089" duration="88000" />
       <workItem from="1525017105029" duration="1329000" />
       <workItem from="1525019965761" duration="3845000" />
-      <workItem from="1525025550691" duration="10172000" />
+      <workItem from="1525025550691" duration="11719000" />
+      <workItem from="1525038760719" duration="168000" />
+      <workItem from="1525039120617" duration="322000" />
     </task>
     <task id="LOCAL-00001" summary="Project rebased">
       <created>1525015338539</created>
@@ -164,20 +191,27 @@
       <option name="project" value="LOCAL" />
       <updated>1525035321301</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Fixed max values in MPI implementation">
+      <created>1525036168819</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1525036168819</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17290000" />
+    <option name="totallyTimeSpent" value="19327000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1600" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.3101673" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30976865" />
       <window_info anchor="bottom" id="TODO" order="5" />
-      <window_info anchor="right" id="Messages" order="4" weight="0.20437019" />
-      <window_info anchor="bottom" id="CMake" order="6" weight="0.32978722" />
+      <window_info anchor="right" id="Messages" order="4" weight="0.20694087" />
+      <window_info anchor="bottom" id="CMake" order="6" visible="true" weight="0.32978722" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32971507" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32978722" />
       <window_info anchor="bottom" id="Serial Monitor" order="9" />
@@ -233,7 +267,8 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Project rebased" />
     <MESSAGE value="Trying to fix max values in MPI implementation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Trying to fix max values in MPI implementation" />
+    <MESSAGE value="Fixed max values in MPI implementation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed max values in MPI implementation" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -244,6 +279,28 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/main.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="5" column="16" lean-forward="true" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+          <folding>
+            <element signature="e#122#256#0" />
+            <element signature="e#258#418#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2772">
+          <caret line="198" column="1" selection-start-line="198" selection-start-column="1" selection-end-line="198" selection-end-column="1" />
+          <folding>
+            <element signature="e#122#256#0" />
+            <element signature="e#258#418#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1470">
@@ -313,20 +370,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/include/mpi.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="1547" column="19" selection-start-line="1547" selection-start-column="19" selection-end-line="1547" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file:///usr/include/mpi.h" />
     <entry file="file:///usr/lib/gcc/x86_64-pc-linux-gnu/7.3.1/include/xmmintrin.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
@@ -336,12 +380,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="188" column="44" lean-forward="true" selection-start-line="188" selection-start-column="44" selection-end-line="188" selection-end-column="44" />
+        <state relative-caret-position="70">
+          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
           <folding>
             <element signature="e#122#256#0" />
             <element signature="e#258#418#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="5" column="27" lean-forward="true" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
         </state>
       </provider>
     </entry>

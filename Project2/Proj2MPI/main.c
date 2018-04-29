@@ -155,24 +155,25 @@ int main(int argc, char **argv) {
         for (int index = 0; index < 4; index++) {
             maxF = maxv[index] > maxF ? maxv[index] : maxF;
         }
-//        printf("%f\n", maxF);
-//        for (int jj = N - k; jj < N; jj++) {
-////             use scalar (traditional) way to compute remaining of array ( N%4 iterations )
-//            float num_0 = LVec[jj] + RVec[jj];
-//            float num_1 = mVec[jj] * (mVec[jj] - 1.f) / 2.f;
-//            float num_2 = nVec[jj] * (nVec[jj] - 1.f) / 2.f;
-//            float num = num_0 / (num_1 + num_2);
-//            float den_0 = CVec[jj] - LVec[jj] - RVec[jj];
-//            float den_1 = mVec[jj] * nVec[jj];
-//            float den = den_0 / den_1;
-//            FVec[jj] = num / (den + 0.01f);
-//            maxF = FVec[jj] > maxF ? FVec[jj] : maxF;
-//        }
+        if (!world_rank) {
+            for (int jj = N - k; jj < N; jj++) {
+                //use scalar (traditional) way to compute remaining of array ( N%4 iterations )
+                float num_0 = LVec[jj] + RVec[jj];
+                float num_1 = mVec[jj] * (mVec[jj] - 1.f) / 2.f;
+                float num_2 = nVec[jj] * (nVec[jj] - 1.f) / 2.f;
+                float num = num_0 / (num_1 + num_2);
+                float den_0 = CVec[jj] - LVec[jj] - RVec[jj];
+                float den_1 = mVec[jj] * nVec[jj];
+                float den = den_0 / den_1;
+                FVec[jj] = num / (den + 0.01f);
+                maxF = FVec[jj] > maxF ? FVec[jj] : maxF;
+            }
+
+        }
         double time1 = gettime();
         timeTotal += time1 - time0;
     }
 
-//    printf("%f\n", maxF);
     float *processMax = world_rank ? NULL : (float *) malloc(sizeof(float) * world_size);
     MPI_Gather(&maxF, 1, MPI_FLOAT, processMax, 1, MPI_FLOAT, 0, MPI_COMM_WORLD);
 
@@ -180,12 +181,9 @@ int main(int argc, char **argv) {
     MPI_Barrier(MPI_COMM_WORLD);
     MPI_Finalize();
 
-//    printf("---------------\n");
-
     if (!world_rank) {
         float globalMax = 0;
         for (int i = 0; i < world_size; i++) {
-//            printf("%f\n", processMax[i]);
             globalMax = globalMax < processMax[i] ? processMax[i] : globalMax;
         }
         printf("Time %f Max %f\n", timeTotal / iters, globalMax);
