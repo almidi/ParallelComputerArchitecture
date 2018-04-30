@@ -80,7 +80,7 @@ int main(int argc, char **argv) {
         double time1 = gettime();
         timeTotal += time1 - time0;
     }
-    printf("Time %f Max %f\n", timeTotal / iters, maxF);
+    printf("Time: %f us, Max %f\n", (timeTotal / iters)*1000000, maxF);
     free(mVec);
     free(nVec);
     free(LVec);

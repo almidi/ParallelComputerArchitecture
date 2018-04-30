@@ -186,7 +186,8 @@ int main(int argc, char **argv) {
         for (int i = 0; i < world_size; i++) {
             globalMax = globalMax < processMax[i] ? processMax[i] : globalMax;
         }
-        printf("Time %f Max %f\n", timeTotal / iters, globalMax);
+		printf("Time: %f us, Max %f\n", (timeTotal / iters)*1000000, globalMax);
+        // printf("Time %f Max %f\n", timeTotal / iters, globalMax);
     }
     free(processMax);
 

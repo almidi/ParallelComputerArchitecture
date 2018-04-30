@@ -13,10 +13,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d84dc88a-695e-4868-b420-6a31b937e5ba" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.c" beforeDir="false" afterPath="$PROJECT_DIR$/main.c" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Proj2SSE/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Proj2SSE/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -30,7 +28,7 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.c" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.c" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.c">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="70">
@@ -39,15 +37,6 @@
                 <element signature="e#122#256#0" />
                 <element signature="e#258#418#0" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="70">
-              <caret line="5" column="27" lean-forward="true" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
             </state>
           </provider>
         </entry>
@@ -79,7 +68,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="4">
     <option name="x" value="801" />
     <option name="width" value="799" />
     <option name="height" value="878" />
@@ -96,6 +85,11 @@
             <path>
               <item name="Proj2MPI" type="b2602c69:ProjectViewProjectNode" />
               <item name="Proj2MPI" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Proj2MPI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Proj2MPI" type="462c0819:PsiDirectoryNode" />
+              <item name="cmake-build-debug" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -161,7 +155,8 @@
       <workItem from="1525019965761" duration="3845000" />
       <workItem from="1525025550691" duration="11719000" />
       <workItem from="1525038760719" duration="168000" />
-      <workItem from="1525039120617" duration="322000" />
+      <workItem from="1525039120617" duration="961000" />
+      <workItem from="1525096905629" duration="1074000" />
     </task>
     <task id="LOCAL-00001" summary="Project rebased">
       <created>1525015338539</created>
@@ -198,26 +193,32 @@
       <option name="project" value="LOCAL" />
       <updated>1525036168819</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="MPI implementation using mpich2">
+      <created>1525039615217</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1525039615217</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19327000" />
+    <option name="totallyTimeSpent" value="21040000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1600" height="878" extended-state="6" />
-    <editor active="true" />
+    <frame x="801" y="0" width="799" height="878" extended-state="4" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30976865" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30860928" />
       <window_info anchor="bottom" id="TODO" order="5" />
-      <window_info anchor="right" id="Messages" order="4" weight="0.20694087" />
-      <window_info anchor="bottom" id="CMake" order="6" visible="true" weight="0.32978722" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32971507" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32978722" />
-      <window_info anchor="bottom" id="Serial Monitor" order="9" />
-      <window_info active="true" anchor="right" id="Run" order="3" visible="true" weight="0.36696658" />
+      <window_info anchor="bottom" id="Messages" order="10" visible="true" weight="0.20611702" />
+      <window_info anchor="right" id="CMake" order="4" weight="0.32969153" />
+      <window_info anchor="bottom" id="Event Log" order="6" side_tool="true" weight="0.32971507" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32978722" />
+      <window_info anchor="bottom" id="Serial Monitor" order="8" />
+      <window_info anchor="right" id="Run" order="3" weight="0.36696658" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32978722" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32978722" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="2" weight="0.39893618" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -268,7 +269,8 @@
     <MESSAGE value="Project rebased" />
     <MESSAGE value="Trying to fix max values in MPI implementation" />
     <MESSAGE value="Fixed max values in MPI implementation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed max values in MPI implementation" />
+    <MESSAGE value="MPI implementation using mpich2" />
+    <option name="LAST_COMMIT_MESSAGE" value="MPI implementation using mpich2" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -279,6 +281,24 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/main.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+          <folding>
+            <element signature="e#122#256#0" />
+            <element signature="e#258#418#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="70">
@@ -378,6 +398,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="70">
@@ -386,13 +413,6 @@
             <element signature="e#122#256#0" />
             <element signature="e#258#418#0" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="5" column="27" lean-forward="true" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
         </state>
       </provider>
     </entry>
