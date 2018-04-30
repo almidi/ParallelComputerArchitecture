@@ -1,4 +1,4 @@
-# Install script for directory: /home/tzanis/Workspace/Clion/ParallelComputerArchitecture/Project2/Proj2MPI
+# Install script for directory: /hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project2/Proj2MPI
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/tzanis/Workspace/Clion/ParallelComputerArchitecture/Project2/Proj2MPI/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project2/Proj2MPI/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
