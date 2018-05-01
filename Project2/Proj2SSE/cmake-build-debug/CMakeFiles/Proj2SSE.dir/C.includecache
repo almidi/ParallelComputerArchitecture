@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/tzanis/Workspace/Clion/ParallelComputerArchitecture/Project2/Proj2SSE/main.c
+/hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project2/Proj2SSE/main.c
 stdio.h
 -
 stdlib.h

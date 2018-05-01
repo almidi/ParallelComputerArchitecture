@@ -152,9 +152,11 @@ int main(int argc, char **argv) {
             *maxv__m128 = _mm_max_ps(*maxv__m128, FVec__m128[i]);
         }
 
-        for (int index = 0; index < 4; index++) {
-            maxF = maxv[index] > maxF ? maxv[index] : maxF;
-        }
+        maxF = maxv[0];
+        maxF = maxv[1] > maxF ? maxv[1] : maxF;
+        maxF = maxv[2] > maxF ? maxv[2] : maxF;
+        maxF = maxv[3] > maxF ? maxv[3] : maxF;
+
         if (!world_rank) {
             for (int jj = N - k; jj < N; jj++) {
                 //use scalar (traditional) way to compute remaining of array ( N%4 iterations )
