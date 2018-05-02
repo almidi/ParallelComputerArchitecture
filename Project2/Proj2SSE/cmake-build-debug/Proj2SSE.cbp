@@ -8,38 +8,38 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project2/Proj2SSE/cmake-build-debug"/>
+				<Option working_dir="/home/tzanis/Workspace/Clion/ParallelComputerArchitecture/Project2/Proj2SSE/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project2/Proj2SSE/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project2/Proj2SSE/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project2/Proj2SSE/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project2/Proj2SSE/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/tzanis/Workspace/Clion/ParallelComputerArchitecture/Project2/Proj2SSE/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/tzanis/Workspace/Clion/ParallelComputerArchitecture/Project2/Proj2SSE/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/tzanis/Workspace/Clion/ParallelComputerArchitecture/Project2/Proj2SSE/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/tzanis/Workspace/Clion/ParallelComputerArchitecture/Project2/Proj2SSE/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project2/Proj2SSE/cmake-build-debug"/>
+				<Option working_dir="/home/tzanis/Workspace/Clion/ParallelComputerArchitecture/Project2/Proj2SSE/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project2/Proj2SSE/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project2/Proj2SSE/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project2/Proj2SSE/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project2/Proj2SSE/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/tzanis/Workspace/Clion/ParallelComputerArchitecture/Project2/Proj2SSE/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/tzanis/Workspace/Clion/ParallelComputerArchitecture/Project2/Proj2SSE/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/tzanis/Workspace/Clion/ParallelComputerArchitecture/Project2/Proj2SSE/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/tzanis/Workspace/Clion/ParallelComputerArchitecture/Project2/Proj2SSE/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project2/Proj2SSE/cmake-build-debug"/>
+				<Option working_dir="/home/tzanis/Workspace/Clion/ParallelComputerArchitecture/Project2/Proj2SSE/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project2/Proj2SSE/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project2/Proj2SSE/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project2/Proj2SSE/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project2/Proj2SSE/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/tzanis/Workspace/Clion/ParallelComputerArchitecture/Project2/Proj2SSE/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/tzanis/Workspace/Clion/ParallelComputerArchitecture/Project2/Proj2SSE/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/tzanis/Workspace/Clion/ParallelComputerArchitecture/Project2/Proj2SSE/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/tzanis/Workspace/Clion/ParallelComputerArchitecture/Project2/Proj2SSE/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Proj2SSE">
-				<Option output="/hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project2/Proj2SSE/cmake-build-debug/Proj2SSE" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project2/Proj2SSE/cmake-build-debug"/>
+				<Option output="/home/tzanis/Workspace/Clion/ParallelComputerArchitecture/Project2/Proj2SSE/cmake-build-debug/Proj2SSE" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/tzanis/Workspace/Clion/ParallelComputerArchitecture/Project2/Proj2SSE/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -50,15 +50,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project2/Proj2SSE/cmake-build-debug/Makefile&quot;  VERBOSE=1 Proj2SSE"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project2/Proj2SSE/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project2/Proj2SSE/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project2/Proj2SSE/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/tzanis/Workspace/Clion/ParallelComputerArchitecture/Project2/Proj2SSE/cmake-build-debug/Makefile&quot;  VERBOSE=1 Proj2SSE"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/tzanis/Workspace/Clion/ParallelComputerArchitecture/Project2/Proj2SSE/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/tzanis/Workspace/Clion/ParallelComputerArchitecture/Project2/Proj2SSE/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/tzanis/Workspace/Clion/ParallelComputerArchitecture/Project2/Proj2SSE/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Proj2SSE/fast">
-				<Option output="/hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project2/Proj2SSE/cmake-build-debug/Proj2SSE" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project2/Proj2SSE/cmake-build-debug"/>
+				<Option output="/home/tzanis/Workspace/Clion/ParallelComputerArchitecture/Project2/Proj2SSE/cmake-build-debug/Proj2SSE" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/tzanis/Workspace/Clion/ParallelComputerArchitecture/Project2/Proj2SSE/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -69,17 +69,17 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j6 -f &quot;/hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project2/Proj2SSE/cmake-build-debug/Makefile&quot;  VERBOSE=1 Proj2SSE/fast"/>
-					<CompileFile command="/usr/bin/make -j6 -f &quot;/hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project2/Proj2SSE/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j6 -f &quot;/hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project2/Proj2SSE/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j6 -f &quot;/hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project2/Proj2SSE/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/tzanis/Workspace/Clion/ParallelComputerArchitecture/Project2/Proj2SSE/cmake-build-debug/Makefile&quot;  VERBOSE=1 Proj2SSE/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/tzanis/Workspace/Clion/ParallelComputerArchitecture/Project2/Proj2SSE/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/tzanis/Workspace/Clion/ParallelComputerArchitecture/Project2/Proj2SSE/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/tzanis/Workspace/Clion/ParallelComputerArchitecture/Project2/Proj2SSE/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project2/Proj2SSE/main.c">
+		<Unit filename="/home/tzanis/Workspace/Clion/ParallelComputerArchitecture/Project2/Proj2SSE/main.c">
 			<Option target="Proj2SSE"/>
 		</Unit>
-		<Unit filename="/hdd/TUC/ParallelCompArch/ParallelComputerArchitecture/Project2/Proj2SSE/CMakeLists.txt">
+		<Unit filename="/home/tzanis/Workspace/Clion/ParallelComputerArchitecture/Project2/Proj2SSE/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

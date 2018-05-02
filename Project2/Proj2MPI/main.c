@@ -106,7 +106,7 @@ int main(int argc, char **argv) {
     const __m128 twov = _mm_set1_ps(2.f);
 
 
-    int processSize = N / world_size;
+    int processSize = (N/4) / world_size;
     int start = processSize * world_rank;
     int end = start + processSize;
 
@@ -116,7 +116,7 @@ int main(int argc, char **argv) {
         //Set MAX to 0
         maxF = 0.0f;
 
-        for (int i = start / 4; i < end / 4; i++) {
+        for (int i = start; i < end; i++) {
             //float num_0 = LVec[i] + RVec[i];
             vec_num_0 = _mm_add_ps(LVec__m128[i], RVec__m128[i]);
 
@@ -158,19 +158,58 @@ int main(int argc, char **argv) {
         maxF = maxv[3] > maxF ? maxv[3] : maxF;
 
         if (!world_rank) {
-            for (int jj = N - k; jj < N; jj++) {
-                //use scalar (traditional) way to compute remaining of array ( N%4 iterations )
-                float num_0 = LVec[jj] + RVec[jj];
-                float num_1 = mVec[jj] * (mVec[jj] - 1.f) / 2.f;
-                float num_2 = nVec[jj] * (nVec[jj] - 1.f) / 2.f;
-                float num = num_0 / (num_1 + num_2);
-                float den_0 = CVec[jj] - LVec[jj] - RVec[jj];
-                float den_1 = mVec[jj] * nVec[jj];
-                float den = den_0 / den_1;
-                FVec[jj] = num / (den + 0.01f);
-                maxF = FVec[jj] > maxF ? FVec[jj] : maxF;
-            }
+            //use simple SSE way to compute remaining of array that is divisible with 4 ( (N/4)-processSize*world_size iterations )
+            start = processSize*world_size;
+            end = N/4;
+            for (int i = start; i < end; i++) {
+                //float num_0 = LVec[i] + RVec[i];
+                vec_num_0 = _mm_add_ps(LVec__m128[i], RVec__m128[i]);
 
+                //float num_1 = mVec[i] * (mVec[i] - 1.0) / 2.0;
+                vec_num_1 = _mm_sub_ps(mVec__m128[i], onev);
+                vec_num_1 = _mm_div_ps(vec_num_1, twov);
+                vec_num_1 = _mm_mul_ps(vec_num_1, mVec__m128[i]);
+
+                //float num_2 = nVec[i] * (nVec[i] - 1.0) / 2.0;
+                vec_num_2 = _mm_sub_ps(nVec__m128[i], onev);
+                vec_num_2 = _mm_div_ps(vec_num_2, twov);
+                vec_num_2 = _mm_mul_ps(vec_num_2, nVec__m128[i]);
+
+                //float num = num_0 / (num_1 + num_2);
+                vec_num = _mm_add_ps(vec_num_1, vec_num_2);
+                vec_num = _mm_div_ps(vec_num_0, vec_num);
+
+                //float den_0 = CVec[i] - LVec[i] - RVec[i];
+                vec_den_0 = _mm_sub_ps(CVec__m128[i], LVec__m128[i]);
+                vec_den_0 = _mm_sub_ps(vec_den_0, RVec__m128[i]);
+
+                //float den_1 = mVec[i] * nVec[i];
+                vec_den_1 = _mm_mul_ps(mVec__m128[i], nVec__m128[i]);
+
+                //float den = den_0 / den_1;
+                vec_den = _mm_div_ps(vec_den_0, vec_den_1);
+
+                //FVec[i] = num / (den + 0.01);
+                FVec__m128[i] = _mm_add_ps(vec_den, pponev);
+                FVec__m128[i] = _mm_div_ps(vec_num, FVec__m128[i]);
+
+                //maxF = FVec[i]>maxF?FVec[i]:maxF;
+                *maxv__m128 = _mm_max_ps(*maxv__m128, FVec__m128[i]);
+            }
+            start = N-k;
+            end = N;
+            for (int i = start; i < end; i++) {
+                //use scalar (traditional) way to compute remaining of array ( N%4 iterations )
+                float num_0 = LVec[i] + RVec[i];
+                float num_1 = mVec[i] * (mVec[i] - 1.f) / 2.f;
+                float num_2 = nVec[i] * (nVec[i] - 1.f) / 2.f;
+                float num = num_0 / (num_1 + num_2);
+                float den_0 = CVec[i] - LVec[i] - RVec[i];
+                float den_1 = mVec[i] * nVec[i];
+                float den = den_0 / den_1;
+                FVec[i] = num / (den + 0.01f);
+                maxF = FVec[i] > maxF ? FVec[i] : maxF;
+            }
         }
         double time1 = gettime();
         timeTotal += time1 - time0;
